@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+
+
+
+</head>
+<body>
+
+<form action="/action_page.php">
+    <div class="conatiner-fluid content-inner mt-n5 py-0">
+        <div>
+          <!--  <div class="row">
+        
+                <div class="col-sm-12 col-lg-6">-->
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title" style="font-size: xx-large;">Job Application</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label" for="exampleInputText1">Job Position</label>
+                                <input type="text" class="form-control" id="exampleInputText1"   placeholder="Job Position">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="exampleInputText2">Job Location</label>
+                                <input type="text" class="form-control" id="exampleInput"   placeholder=" Job Location ">
+                                <br>
+                            
+                                <div >
+                                    <label for="customRange3" class="form-label">Salary range</label><br><br>
+                                    <input type="range" class="form-range" min="0" max="90" step="0.5" id="customRange3">
+                                </div>
+        
+<!-------------------------------                                <div class="dropdown">
+                                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                      <a href="#home">Home</a>
+                                      <a href="#about">About</a>
+                                      <a href="#contact">Contact</a>
+                                    </div>
+                                  </div>
+---------------------------->
+
+<p>Valid Till &nbsp;&nbsp;
+    <input type="datetime-local" id="Test_DatetimeLocal">
+</p>
+
+<div class="form-group">
+    <label class="form-label" for="exampleInputText1">Number of Openings</label>
+    <input type="text" class="form-control" id="exampleInputText1" >
+</div>
+ 
+
+                           <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-danger">cancel</button>
+        
+                        </form>
+                    </div>
+                </div>
+        
+                     
+                    </div>
+                </div>
+</form>
+
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+
+</body>
+</html>
