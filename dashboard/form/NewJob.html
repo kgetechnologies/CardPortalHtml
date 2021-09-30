@@ -1029,21 +1029,40 @@
                         <input type="text" class="form-control" id="exampleInput"   placeholder="Job Location">
                         <br>
 
-                        <div class="mb-3">
-                          <label for="customRange3" class="form-label">Salary range</label>
-                          <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+                        <div class="dropdown">
+                          <label for="customRange3" class="form-label">Salary</label>
+                           <div class="form-group form-group-alt">
+                            <input type="text" class="form-control" placeholder="Min">
+                        </div>
+
+                        <div class="form-group form-group-alt">
+                          <input type="text" class="form-control" placeholder="Max">
                       </div>
+                            <br>
                       
                       <div class="dropdown">
                         <label for="customRange3" class="form-label">Experience</label>
-                        <button class="btn btn-lg dropdown-toggle" type="button" id="dropdownMenuButtonLG" data-bs-toggle="dropdown" aria-expanded="false">
-                        Experience
+
+                        <button class="btn btn-lg dropdown-toggle" type="button" id="dropdownMenuButtonLG2" data-bs-toggle="dropdown" aria-expanded="false">
+                         Min
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLG">
+                              <li><a class="dropdown-item" href="#">0-3(Fresher)</a></li>
+                              <li><a class="dropdown-item" href="#">3-10</a></li> 
+                              <li><a class="dropdown-item" href="#">10-20</a></li>
+                              <li><a class="dropdown-item" href="#">20-30</a></li>
+                              <li><a class="dropdown-item" href="#">30-40</a></li>
+                          </ul>
+
+                        <button class="btn btn-lg dropdown-toggle" type="button" id="dropdownMenuButtonLG3" data-bs-toggle="dropdown" aria-expanded="false">
+                        Max
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLG">
-                            
-                            <li><a class="dropdown-item" href="#">0-3(Fresher)</a></li>
-                            <li><a class="dropdown-item" href="#">5-20</a></li>
-                           
+                          <li><a class="dropdown-item" href="#">0-3(Fresher)</a></li>
+                          <li><a class="dropdown-item" href="#">3-10</a></li> 
+                          <li><a class="dropdown-item" href="#">10-20</a></li>
+                          <li><a class="dropdown-item" href="#">20-30</a></li>
+                          <li><a class="dropdown-item" href="#">30-40</a></li> 
                         </ul>
                     </div>
                     <br>
