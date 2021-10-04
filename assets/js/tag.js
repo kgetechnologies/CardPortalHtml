@@ -41,3 +41,25 @@ $('#tags_1').on('click', '.tag', function() {
 });
 
 });
+
+/**/
+$(document).ready(function() {
+
+handleStatusChanged();
+
+});
+
+function handleStatusChanged() {
+ $('#toggleElement_1').on('change', function () {
+   toggleStatus_1();
+ });
+}
+
+function toggleStatus_1() {
+ if ($('#toggleElement_1').is(':checked')) {
+     $('#elementsToOperateOn :input').attr('disabled', true);
+ } else {
+     $('#elementsToOperateOn :input').removeAttr('disabled');
+ }
+}
+ ;
