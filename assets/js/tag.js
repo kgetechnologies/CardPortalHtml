@@ -63,3 +63,25 @@ function toggleStatus_1() {
  }
 }
  ;
+/**/
+
+$(document).ready(function() {
+
+handleStatusChanged();
+
+});
+
+function handleStatusChanged() {
+ $('#toggleElement_2').on('change', function () {
+   toggleStatus_1();
+ });
+}
+
+function toggleStatus_1() {
+ if ($('#toggleElement_2').is(':checked')) {
+     $('#elementsToOperateOn :input').attr('disabled', true);
+ } else {
+     $('#elementsToOperateOn :input').removeAttr('disabled');
+ }
+}
+ ;
