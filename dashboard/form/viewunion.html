@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <style>
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+
+      input {
+        font-size: 14px;
+        font-family: Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #BBB;
+        font-family: Helvetica, sans-serif;
+        padding-bottom: 100px;
+      }
+
+      h2, h3 {
+        margin: 0 0 .75em 0;
+      }
+
+      /* first example */
+      .container {
+        max-width: 750px;
+        margin: 20px auto 0 auto;
+        padding: 60px;
+
+
+      }
+
+
+
+      /* second example */
+      .column-layout {
+        max-width: 1300px;
+        background-color: #FFF;
+        margin: 40px auto 0 auto;
+        line-height: 1.65;
+        padding: 20px 50px;
+      }
+
+      .main-column {
+        flex: 3;
+        order: 2;
+      }
+
+      .sidebar-one {
+        flex: 1;
+        order: 1;
+      }
+
+      .sidebar-two {
+        flex: 1;
+        order: 3;
+      }
+
+      @media (min-width: 900px) {
+        .column-layout {
+          display: flex;
+        }
+      }
+
+      /* third example */
+      .call-outs-container {
+        max-width: 1400px;
+        margin: 40px auto 0 auto;
+      }
+
+      .call-out {
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        flex-basis: 30%;
+      }
+
+      @media (min-width: 900px) {
+        .call-outs-container {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .call-out:nth-child(1) {background-color: #c0dbe2;}
+      .call-out:nth-child(2) {background-color: #cdf1c3;}
+      .call-out:nth-child(3) {background-color: #ccb9da;}
+
+      /* fourth example */
+      .fixed-size-container {
+        max-width: 1400px;
+        margin: 40px auto 0 auto;
+        background-color: #FFF;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .fixed-size {
+        width: 150px;
+        height: 100px;
+        background-color: #990b47;
+        color: #FFF;
+        line-height: 100px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+
+      /* fifth example */
+      .banner {
+        height: 400px;
+        max-width: 700px;
+        margin: 40px auto 40px auto;
+        background-color: #2a2a2a;
+        display: flex;
+      }
+
+      .center-me {
+        color: #FFF;
+        font-size: 50px;
+        margin: auto;
+      }
+
+      /* sixth example */
+      .equal-height-container {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .first {
+        background-color: #FFF;
+        padding: 20px;
+        flex: 1;
+      }
+
+      .second {
+        background-color: yellow;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .second-a {
+        background-color: #c0dbe2;
+        flex: 1;
+      }
+
+      .second-b {
+        background-color: #cdf1c3;
+        flex: 1;
+      }
+
+    </style>
+
+    <!-- first example -->
+<div class="container">
+<img src="images/auth/medicine.jpg" alt="">
+</div>
+
+<!-- second example -->
+<div class="column-layout">
+  <div class="main-column">
+    <h2>Bussiness Information</h2>
+    <p>Plus Healthcare Pharmacy Online Medicine Home Delivery in Mumbai is one of the leading businesses in the Chemists. Also known for Chemists, Chemist Home Delivery, 24 Hours Chemists Home Delivery, ESIC Chemists and much more. Find Address, Contact Number, Reviews & Ratings, Photos, Maps of Plus Healthcare Pharmacy Online Medicine Home Delivery, Mumbai.</p>
+    <h2>Location and Overview</h2>
+    <p>Established in the year 2017, Plus Healthcare Pharmacy Online Medicine Home Delivery in Bhandup West, Mumbai is a top player in the category Chemists in the Mumbai. This well-known establishment acts as a one-stop destination servicing customers both local and from other parts of Mumbai. Over the course of its journey, this business has established a firm foothold in it’s industry. The belief that customer satisfaction is as important as their products and services, have helped this establishment garner a vast base of customers, which continues to grow by the day. This business employs individuals that are dedicated towards their respective roles and put in a lot of effort to achieve the common vision and larger goals of the company. In the near future, this business aims to expand its line of products and services and cater to a larger client base. In Mumbai, this establishment occupies a prominent location in Bhandup West. It is an effortless task in commuting to this establishment as there are various modes of transport readily available. It is known to provide top service in the following categories: Chemists, Chemist Home Delivery, 24 Hours Chemists Home Delivery, ESIC Chemists.</p>
+    <h2>Product and Service Offered</h2>
+    <p>Plus Healthcare Pharmacy Online Medicine Home Delivery in Bhandup West has a wide range of products and / or services to cater to the varied requirements of their customers. The staff at this establishment are courteous and prompt at providing any assistance. They readily answer any queries or questions that you may have. Pay for the product or service with ease by using any of the available modes of payment, such as Cash, NEFT, RTGS, IMPS, G Pay, UPI, BHIM, Paytm, Amazon Pay, PhonePe, Ola Money. This establishment is functional from 00:00 - 23:59.
+
+Please scroll to the top for the address and contact details of Plus Healthcare Pharmacy Online Medicine Home Delivery at Bhandup West, Mumbai.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi earum fugit veniam amet quae sint vitae numquam dolore sunt quod a odio officia voluptate doloribus, at. Cum quasi mollitia eaque.</p>
+
+<h1>Frequently Ask Questions</h1>
+<h3>1. What are the various mode of payment accepted here ?</h3>
+<p>You can make payment Via Cash, NEFT, RTGS, IMPS, G Pay, UPI, BHIM, Paytm, Amazon Pay, PhonePe, Ola Money.</p>
+<h3>2. What are its hours of operation ?</h3>
+<p>The establishment is functional on</p>
+<li>Monday:- Open 24 Hrs</li>
+<li>Tuesday:- Open 24 Hrs</li>
+<li>Wednesday:-Open 24 Hrs</li>
+<li>Thursday:-Open 24 Hrs</li>
+<li>Friday:-Open 24 Hrs</li>
+<li>Saturday:- Open 24 Hrs</li>
+
+  </div>
+
+  <div class="sidebar-one">
+    <h3>Sidebar One</h3>
+  <ul>
+    <li> 9908880000</li>
+    <li>C- 211/212, EASTERN BUSINESS DISTRICT,  <br> L B S MARG, Bhandup <br> West, Mumbai - 400078</li>
+
+<li><a href="https://www.google.com">Send Enquiry by mail</a></li><br><br>
+
+  </ul>
+  <h3>Opening Hours</h3>
+  <p>Today  <span>24 Hours</span> Open</p>
+
+  <h3>Services</h3>
+  <p>Home Delivery</p>
+
+    <h3>Mode of Payment</h3>
+    <p>Cash</p>
+    <p>Debit card</p>
+    <p>Gpay</p>
+    <p>UPI</p>
+    <p>Paytm</p>
+    <p>PhonePe</p>
+  </div>
+
+  <div class="sidebar-two">
+    <h3>Sidebar Two</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum modi nisi tenetur sint dignissimos nulla, blanditiis nesciunt.</p>
+  </div>
+</div>
+
+<!-- third example -->
+<div class="call-outs-container">
+  <div class="call-out">
+    <h4>Feature 1</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit consectetur nobis molestias! Explicabo deserunt. Consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam placeat numquam omnis sit consectetur.</p>
+  </div>
+
+  <div class="call-out">
+    <h4>Feature 2</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit consectetur nobis molestias! Explicabo deserunt placeat numquam omnis.</p>
+  </div>
+
+  <div class="call-out">
+    <h4>Feature 3</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam obcaecati vel, placeat numquam omnis sit.</p>
+  </div>
+</div>
+
+<!-- fourth example -->
+<div class="fixed-size-container">
+  <div class="fixed-size">1</div>
+  <div class="fixed-size">2</div>
+  <div class="fixed-size">3</div>
+  <div class="fixed-size">4</div>
+  <div class="fixed-size">5</div>
+</div>
+
+<!-- fifth example -->
+<div class="banner">
+  <div class="center-me">Center Me Plz</div>
+</div>
+
+<!-- sixth example -->
+<div class="equal-height-container">
+  <div class="first">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quasi similique amet voluptatem molestiae nostrum ab nesciunt blanditiis repellendus quos, sequi sunt, dolorem quis facilis mollitia nemo modi doloribus quo.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat quisquam, veritatis ducimus, vero magnam hic quia pariatur asperiores laudantium quod nobis perspiciatis, expedita quo reprehenderit quasi iusto ullam error reiciendis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quasi similique amet voluptatem molestiae nostrum ab nesciunt blanditiis repellendus quos, sequi sunt, dolorem quis facilis mollitia nemo modi doloribus quo.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat quisquam, veritatis ducimus, vero magnam hic quia pariatur asperiores laudantium quod nobis perspiciatis, expedita quo reprehenderit quasi iusto ullam error reiciendis.</p>
+  </div>
+
+  <div class="second">
+    <div class="second-a">A</div>
+    <div class="second-b">B</div>
+  </div>
+</div>
+
+  </body>
+</html>
