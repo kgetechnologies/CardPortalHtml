@@ -1088,13 +1088,13 @@
                        <div class="col">
                          <label class="form-label" for="exampleInputText2">Select</label>
                        <div data-name="check">
-                         <input id="toggleElement" type="checkbox" class="form-check-input"  name="toggle" onchange="toggleStatus()" />   24 Hrs
-                          <input id="toggleElement_1" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus_1()" />   Closed
+                         <input id="toggleElement" type="checkbox" class="form-check-input"  name="toggle1" onchange="toggleStatus()" />   24 Hrs
+                          <input id="toggleElement_1" class="form-check-input" type="checkbox" name="toggle2" onchange="toggleStatus_1()" />   Closed
                      </div></div>
                        </div>
                      </div>
                      <div class="form-group">
-                       <div class="row"><div id="elementsToOperateOn">
+                       <div class="row"><div id="elementsToOperateOn_2">
                          <label class="form-label" for="exampleInputText3">Tuesday</label>
                          <div class="col col-lg-6">
 
@@ -1109,13 +1109,13 @@
                          <div class="col">
                            <label class="form-label" for="exampleInputText2">Select</label>
                          <div data-name="check">
-                           <input id="toggleElement" type="checkbox" class="form-check-input"  name="toggle" onchange="toggleStatus()" />   24 Hrs
+                          <input id="toggleElement_1" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus_1()" />   24 Hrs
                             <input id="toggleElement_2" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus_2()" />   Closed
                         </div></div>
                          </div>
                        </div>
                        <div class="form-group">
-                         <div class="row">   <div id="elementsToOperateOn">
+                         <div class="row">   <div id="elementsToOperateOn_3">
                            <label class="form-label" for="exampleInputText3"> Wednesday</label>
                            <div class="col col-lg-6">
 
@@ -1129,10 +1129,10 @@
                        </div> </div></div>
                            <div class="col">
                              <label class="form-label" for="exampleInputText2">Select</label>
-                           <div data-name="check">
-                             <input type="checkbox" class="form-check-input" id="exampleCheck3" value="closed">   24 Hrs
-                              <input id="toggleElement" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus()" />   Closed
-                         </div></div>
+                             <div data-name="check">
+                               <input id="toggleElement_3" type="checkbox" class="form-check-input"  name="toggle" onchange="toggleStatus_3()" />   24 Hrs
+                                <input id="toggleElement_4" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus_4()" />   Closed
+                           </div></div>
                            </div>
                          </div>
                          <div class="form-group">
@@ -1548,11 +1548,6 @@
          $('#elementsToOperateOn :input').removeAttr('disabled');
      }
  }
- $(document).ready(function() {
-
-handleStatusChanged();
-
-});
 
 
     </script>
