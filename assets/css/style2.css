@@ -9,12 +9,12 @@ input {
 }
 
 body {
-  background-color: #BBB;
+  background-color: lightblue;
   font-family: Helvetica, sans-serif;
-  padding-bottom: 100px;
+
 }
 
-h2, h3 {
+hc2, h3 {
   margin: 0 0 .75em 0;
 }
 
@@ -22,7 +22,7 @@ h2, h3 {
 .container {
   max-width: 750px;
   margin: 20px auto 0 auto;
-  padding: 30px;
+
   background-image: url(https://images.pexels.com/photos/161449/medical-tablets-pills-drug-161449.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
 
 }
@@ -32,10 +32,10 @@ h2, h3 {
 /* second example */
 .column-layout {
   max-width: 1300px;
-  background-color: #FFF;
-  margin: 40px auto 0 auto;
+
+
   line-height: 1.65;
-  padding: 20px 50px;
+
 }
 
 .main-column {
@@ -156,3 +156,91 @@ h2, h3 {
 
 }
 /**/
+
+          input {
+            font-size: 14px;
+            font-family: Helvetica, sans-serif;
+          }
+
+
+          h2, h3 {
+            margin: 0 0 .75em 0;
+          }
+
+          /* first example */
+          .container {
+            max-width: 750px;
+            margin: 20px auto 0 auto;
+            padding: 60px;
+
+
+          }
+
+
+
+          /* second example */
+          .column-layout {
+            max-width: 1300px;
+
+            line-height: 1.65;
+
+          }
+
+          .main-column {
+            margin: 10px;
+            padding: 10px;
+            flex: 3;
+            order: 2;
+            background-color:#f7f7ed;
+          }
+
+          .sidebar-one {
+            margin: 10px;
+            padding: 10px;
+            flex: 1;
+            order: 1;
+            background-color: #f7f7ed;
+          }
+
+          .sidebar-two {
+            margin: 10px;
+            padding: 10px;
+            flex: 1;
+            order: 3;
+              background-color: #f7f7ed;
+          }
+
+          @media (min-width: 900px) {
+            .column-layout {
+              display: flex;
+            }
+          }
+
+          /* fifth example */
+
+
+          /* sixth example */
+
+
+          .first {
+            background-color: #FFF;
+            padding: 20px;
+            flex: 1;
+          }
+
+          .second {
+            background-color: yellow;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .second-a {
+            background-color: #c0dbe2;
+            flex: 1;
+          }
+
+          .second-b {
+            background-color: #cdf1c3;
+            flex: 1;
+          }
