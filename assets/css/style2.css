@@ -9,7 +9,7 @@ input {
 }
 
 body {
-  background-color: lightblue;
+  background-color:lightgrey;
   font-family: Helvetica, sans-serif;
 
 }
@@ -70,6 +70,11 @@ hc2, h3 {
   box-sizing: border-box;
   margin-bottom: 20px;
   flex-basis: 30%;
+}
+
+.big{
+
+  font-size: 3em;
 }
 
 @media (min-width: 900px) {
@@ -255,4 +260,10 @@ hc2, h3 {
 
           .Weekdays{
             color: black;
+          }
+
+
+          img{
+
+            background-image(https://www.elsevier.com/__data/assets/image/0010/1117675/medicine-desktop.jpg);
           }

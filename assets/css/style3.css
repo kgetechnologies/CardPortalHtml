@@ -1,0 +1,69 @@
+/* Carsole is here  */
+
+
+@font-face {
+  font-family: 'mouse-300';
+  src: url("../fonts/PT_Sans-Web-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'mouse-500';
+  src: url("../fonts/PT_Sans-Web-Bold.ttf") format("truetype"); }
+/* ===================================== Basic CSS ================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+
+gallery-filter {
+  width: 100%;
+  text-align: center; }
+  .gallery-filter .btn {
+    background-color: #FFF; }
+
+.gallery {
+  padding: 80px 50px;
+  background-color: #FAFAFA; }
+  @media screen and (max-width: 940px) {
+    .gallery {
+      padding: 50px 10px; } }
+
+.gallery-title {
+  font-size: 36px;
+  color: #00ab9f;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 70px; }
+
+.gallery-title:after {
+  content: "";
+  position: absolute;
+  width: 7.5%;
+  left: 46.5%;
+  height: 45px;
+  border-bottom: 1px solid #00ab9f; }
+
+.filter-button {
+  font-size: 18px;
+  border: 1px solid #00ab9f;
+  border-radius: 5px;
+  text-align: center;
+  color: #00ab9f;
+  margin-bottom: 30px; }
+
+.filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #00ab9f;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #00ab9f; }
+
+.btn-default:active .filter-button:active {
+  background-color: #00ab9f;
+  color: white; }
+
+.port-image {
+  width: 100%; }
+
+.gallery_product {
+  margin-bottom: 30px; }
