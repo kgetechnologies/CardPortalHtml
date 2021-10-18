@@ -5,25 +5,29 @@ function isMaxLength(val) {
 }
 
 function clearDiv() {
-    const divNode = document.getElementById("validationServer04");
+    const divNode = document.getElementById("textInputCity");
     divNode.innerHTML = '';
 }
 
 function addLi(array) {
     var c1 = document.createElement("OPTION");
     var text = document.createTextNode(array[0]);
-    var text2 = document.getElementById("validationServer03");
+    var text2 = document.getElementById("textInputState");
+    var text3 = document.getElementById("textInputDistrict");
 
     text2.value = array[3];
+    text3.value = array[1];
+
+    console.log('text array0' + array[0]);
 
     c1.appendChild(text);
-    document.getElementById("validationServer04").appendChild(c1);
+    document.getElementById("textInputCity").appendChild(c1);
 }
 
 
 function parseJson() {
     clearDiv();
-    var pinValue = document.getElementById("validationServer05").value;
+    var pinValue = document.getElementById("textInputPincode").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {

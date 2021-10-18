@@ -1042,20 +1042,23 @@
                     <div class="form-group">
                       <div class="row">
                           <div class="col">
-                            <label class="form-label" for="exampleInputText3"> City </label>
-                          <input type="text" class="form-control" placeholder="City">
+                            <label class="form-label" for="exampleInputText1"> City </label>
+                          <select class="form-select" id="textInputCity" required="">
+                                                    <option selected="" disabled="" value="">Choose...</option>
+                                                    <option>...</option>
+                                                </select>
                           </div>
                           <div class="col">
                             <label class="form-label" for="exampleInputText2">District </label>
-                          <input type="text" class="form-control" placeholder="District">
+                          <input type="text" class="form-control" placeholder="District" id="textInputDistrict">
                           </div>
                           <div class="col">
                             <label class="form-label" for="exampleInputText3">State </label>
-                          <input type="text" class="form-control"  placeholder="State">
+                          <input type="text" class="form-control"  placeholder="State" id="textInputState">
                           </div>
                           <div class="col">
                             <label class="form-label" for="exampleInputText4">Pincode </label>
-                          <input type="text" class="form-control" placeholder="Pincode">
+                          <input type="text" class="form-control" placeholder="Pincode" id="textInputPincode" maxlength="6" onkeyup="isMaxLength(this)">
                           </div>
                         </div>
                     </div>
@@ -1551,6 +1554,9 @@
 
 
     </script>
+
+  <!-- Ajax Pincode Script -->
+  <script src="../../assets/js/ajax_zip.js"></script>
 
   </body>
 </html>
