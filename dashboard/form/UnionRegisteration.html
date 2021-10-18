@@ -1042,25 +1042,32 @@
                     <div class="form-group">
                       <div class="row">
                           <div class="col">
-                            <label class="form-label" for="exampleInputText1"> City </label>
-                          <select class="form-select" id="textInputCity" required="">
-                                                    <option selected="" disabled="" value="">Choose...</option>
-                                                    <option>...</option>
-                                                </select>
+                            <label class="form-label" for="exampleInputText1">Pincode </label>
+                          <input type="text" class="form-control" placeholder="Pincode" id="textInputPincode" maxlength="6" onkeyup="isMaxLength(this)">
                           </div>
                           <div class="col">
-                            <label class="form-label" for="exampleInputText2">District </label>
+                            <label class="form-label" for="exampleInputText2"> Area </label>
+                          <select class="form-select" id="textInputArea" required="" >
+                            <option selected="" disabled="" value="">Choose...</option>
+                            <option>...</option>
+                          </select>
+                          </div>
+                          <div class="col">
+                            <label class="form-label" for="exampleInputText3">District </label>
                           <input type="text" class="form-control" placeholder="District" id="textInputDistrict">
                           </div>
                           <div class="col">
-                            <label class="form-label" for="exampleInputText3">State </label>
+                            <label class="form-label" for="exampleInputText4">State </label>
                           <input type="text" class="form-control"  placeholder="State" id="textInputState">
                           </div>
+                      </div>
+                      <br>
+                      <div class="row">
                           <div class="col">
-                            <label class="form-label" for="exampleInputText4">Pincode </label>
-                          <input type="text" class="form-control" placeholder="Pincode" id="textInputPincode" maxlength="6" onkeyup="isMaxLength(this)">
+                            <label class="form-label" for="exampleInputText1">City </label>
+                          <input type="text" class="form-control"  placeholder="City" id="textInputCity">
                           </div>
-                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="exampleInputphone">Contact number</label>

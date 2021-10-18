@@ -1,12 +1,21 @@
 function isMaxLength(val) {
     var Len = val.getAttribute('maxlength');
     var ValueLen = val.value.length;
-    if (ValueLen >= Len) { parseJson(); }
+    if (ValueLen == Len) { parseJson(1); }
+    else { parseJson(0); }
 }
 
 function clearDiv() {
-    const divNode = document.getElementById("textInputCity");
+    var text2 = document.getElementById("textInputState");
+    var text3 = document.getElementById("textInputDistrict");
+    var text4 = document.getElementById("textInputCity");
+
+    const divNode = document.getElementById("textInputArea");
     divNode.innerHTML = '';
+    
+    text2.value = '';
+    text3.value = '';
+    text4.value = '';
 }
 
 function addLi(array) {
@@ -14,19 +23,22 @@ function addLi(array) {
     var text = document.createTextNode(array[0]);
     var text2 = document.getElementById("textInputState");
     var text3 = document.getElementById("textInputDistrict");
+    var text4 = document.getElementById("textInputCity");
 
     text2.value = array[3];
     text3.value = array[1];
-
-    console.log('text array0' + array[0]);
+    text4.value = array[2];
 
     c1.appendChild(text);
-    document.getElementById("textInputCity").appendChild(c1);
+    document.getElementById("textInputArea").appendChild(c1);
 }
 
 
-function parseJson() {
-    clearDiv();
+function parseJson(toEmpty) {
+    if (toEmpty == 0) {
+        clearDiv();
+        return;
+    };
     var pinValue = document.getElementById("textInputPincode").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
