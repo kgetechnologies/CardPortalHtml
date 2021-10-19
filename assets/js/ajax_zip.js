@@ -5,6 +5,26 @@ function isMaxLength(val) {
     else { parseJson(0); }
 }
 
+function addOp() {
+    var o1 = document.createElement("OPTION");
+    var o2 = document.createElement("OPTION");
+    var text = document.createTextNode("Please select...");
+    var text2 = document.createTextNode("...");
+
+    const divNode = document.getElementById("textInputArea");
+    divNode.innerHTML = '';
+
+    o1.appendChild(text);
+    o2.appendChild(text2);
+    
+    o1.setAttribute("selected", "");
+    o1.setAttribute("disabled", "");
+    o1.setAttribute("value", "");
+
+    document.getElementById("textInputArea").appendChild(o1);
+    document.getElementById("textInputArea").appendChild(o2);
+}
+
 function clearDiv() {
     var text2 = document.getElementById("textInputState");
     var text3 = document.getElementById("textInputDistrict");
@@ -16,6 +36,8 @@ function clearDiv() {
     text2.value = '';
     text3.value = '';
     text4.value = '';
+
+    addOp();
 }
 
 function addLi(array) {
@@ -39,6 +61,9 @@ function parseJson(toEmpty) {
         clearDiv();
         return;
     };
+    const divNode = document.getElementById("textInputArea");
+    divNode.innerHTML = '';
+    
     var pinValue = document.getElementById("textInputPincode").value;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
