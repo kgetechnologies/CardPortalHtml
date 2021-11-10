@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en" dir="ltr">
   <head>
@@ -32,7 +30,7 @@
 
       <style>
           .sidenav {
-      height: 60%;
+      height: 70%;
       overflow:scroll;
       width: 0;
       position: absolute;
@@ -42,8 +40,8 @@
       background-color: #ffffff;
       overflow-x: hidden;
       transition: 0.5s;
-      padding-top: 20px;
-      padding-bottom: 10px;
+      padding-top: 0px;
+      padding-bottom: 0px;
       border-style: solid;
       border-width: 1px;
     }
@@ -770,9 +768,11 @@
    </div>
    <!-- navbar all filters -->
    <div id="mySidenav" class="sidenav">
+    <div style="position: sticky;top: 0;bottom: 0;z-index:2;">
      <a href="javascript:void(0)" class="closebtn" id="closeCross" onclick="closeNav()">&times;</a>
+    </div>
       <div class="container">
-        <div class="row">
+        <div class="row" style="position: sticky;top: 0;bottom: 0;overflow-y: auto;background: white;padding-top: 4%;z-index: 1;">
           <h4>Filter Only <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
          Jobs
          </button>
@@ -978,7 +978,7 @@
           </div>
         </div>
         <hr class="solid" style="margin-top:2%;">
-        <div class="row">
+        <div class="row" style="position: sticky;top: 0;bottom: 0;overflow-y: auto;background: white;padding-top: 4%;z-index: 1;padding-bottom: 15px;">
         <div style="display: inline-flex">
           <a class="dropdown-item" href="#">Reset</a>
           <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 120px;font-size: 14px;white-space: nowrap;padding-right: 110px;">Show Results</button>
@@ -992,9 +992,21 @@
 <!-- Job Listing Navbar Section End-->
 
 <!-- Job Listing Main Section Start-->
-<div class="container" style="background:red;height:850px;">
-  <div class="col-sm"></div>
-  <div class="col-sm"></div>
+<div class="container">
+<div class="row">
+
+  <div class="col-md-5" style="background:pink;height:850px;">
+    <div class="row">
+    </div>
+  </div>
+
+
+  <div class="col-md-7" style="background:blue;height:850px;">
+    <div class="row">
+    </div>
+  </div>
+
+</div>
 </div>
 <!-- Job Listing Main Section End-->
 
