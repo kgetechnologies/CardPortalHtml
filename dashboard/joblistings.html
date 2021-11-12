@@ -23,6 +23,7 @@
 
       <!-- RTL Css -->
       <link rel="stylesheet" href="../assets/css/rtl.min.css"/>
+      
 
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -44,6 +45,42 @@
       padding-bottom: 0px;
       border-style: solid;
       border-width: 1px;
+    }
+
+    #jobsCol1 {
+      background:pink;
+      height:850px;
+      overflow:scroll;
+      overflow-x:hidden;
+      padding-left:0px;
+      padding-right:0px;
+    }
+    #jobsCol2 {
+      background:blue;
+      height:850px;
+      overflow:scroll;
+      overflow-x:hidden;
+      padding-left:0px;
+      padding-right:0px;
+    }
+
+    .list-group-item {
+      height:130px;
+      padding-left:3px;
+    }
+
+    .col-md-2 {
+      background:#ffffff;
+      height:110px;
+      padding:0;
+    }
+    .col-md-10 {
+      background:#ffffff;
+      height:110px;
+    }
+    .col-md-10 p {
+      margin : 0;
+      padding-top:0;
     }
 
     #closeCross {
@@ -995,15 +1032,37 @@
 <div class="container">
 <div class="row">
 
-  <div class="col-md-5" style="background:pink;height:850px;">
-    <div class="row" style="position: sticky;top: 0;bottom: 0;overflow-y: auto;padding-top:5px;background: white;z-index: 1;">
+  <div class="col-md-5" id="jobsCol1">
+    <div class="row" style="position:sticky;top:0;bottom:0;overflow-y:auto;padding-top:5px;padding-left:15px;background:white;z-index:1;">
       <h6>Jobs in India</h6>
       <p>results</p>
     </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="https://image.shutterstock.com/image-vector/connect-logo-600w-444774109.jpg" width=100%>
+            </div>
+            <div class="col-md-10">
+              <h6>Id</h6>
+              <p>Company Name</p>
+              <p>City</p>
+              <p>Your profile matches this job</p>
+              <p>Time posted</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
   </div>
 
 
-  <div class="col-md-7" style="background:blue;height:850px;">
+  <div class="col-md-7" id="jobsCol2">
     <div class="row">
 
     </div>
