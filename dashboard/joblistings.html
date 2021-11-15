@@ -56,17 +56,22 @@
       padding-right:0px;
     }
     #jobsCol2 {
-      background:blue;
+      background:#F5F2D0;
       height:850px;
       overflow:scroll;
       overflow-x:hidden;
-      padding-left:0px;
-      padding-right:0px;
+      padding:15px;
     }
 
-    .list-group-item {
+    .col-md-5-list li {
       height:130px;
       padding-left:3px;
+    }
+
+    .col-md-7-list li {
+      border: none;
+      padding-top:0;
+      padding-bottom:0;
     }
 
     .col-md-2 {
@@ -1037,7 +1042,7 @@
       <h6>Jobs in India</h6>
       <p>results</p>
     </div>
-    <ul class="list-group">
+    <ul class="list-group col-md-5-list">
       <li class="list-group-item">
         <div class="container">
           <div class="row">
@@ -1064,7 +1069,55 @@
 
   <div class="col-md-7" id="jobsCol2">
     <div class="row">
-
+      <h6>%JOB TYPE%</h6>
+      <p>%COMPANY NAME% • %CITY% • %TIMEPOSTED% • %APPLICANTS%</p>
+      <ul class="list-group col-md-7-list">
+        <li class="list-group-item"><img src="./../assets/images/icons/l1.jpg" width=40px>%JOB TYPE%</li>
+        <li class="list-group-item"><img src="./../assets/images/icons/l2.jpg" width=40px>%EMPLOYEE COUNT%</li>
+        <li class="list-group-item"><img src="./../assets/images/icons/l3.jpg" width=40px>Try Premium</li>
+        <li class="list-group-item"><img src="./../assets/images/icons/l4.jpg" width=40px>%CanApply%</li>
+      </ul>
+      <div style="padding-top:10px;">
+        <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 100px;font-size: 14px;white-space: nowrap;font-weight:bold;">Apply</button>
+        <button type="button" class="btn btn-outline-primary" style="border-radius: 30px;width: 100px;font-size: 14px;white-space: nowrap;font-weight:bold;">Save</button>
+      </div>
+      <div class="row">
+        <p>%COMPANY DETAILS%</p>
+        <p>%JOB DESCRIPTION%</p>
+      <div>
+      <div class="row" style="margin-left: 10px;">
+        <ul class="list-group">
+          <li class="list-group-item">Pay range: %SALARY%</li>
+        <ul>
+      </div>
+      <br>
+      <div class="row" style="margin-left: 10px;">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="container">
+              <div class="row">
+                <p><b>About company</b></p>
+                <br>
+              </div>
+              <div class="row">
+                <div class="col-md-2" style="height:80px"><img src="https://image.shutterstock.com/image-vector/connect-logo-600w-444774109.jpg" width=65px></div>
+                <div class="col-md-7" style="height:80px">
+                  <p>%COMPANY NAME%</p>
+                  <p>%FOLLOWERS%</p>
+                </div>
+                <div class="col-md-3" style="height:80px">
+                  <button type="button" class="btn btn-outline-primary" style="border-radius: 30px;width: 110px;font-size: 14px;white-space: nowrap;font-weight:bold;">+ Follow</button>                
+                </div>
+              </div>
+              <div class="row">
+                <p> %EmployerType% • %EMPLOYEE COUNT% • %APPLICANTS%</p>
+                <p>About company in detail</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item justify-content-center" style="display:flex;align-items:center;"><a href=# >See more</a></li>
+        <ul>
+      </div>
     </div>
   </div>
 
