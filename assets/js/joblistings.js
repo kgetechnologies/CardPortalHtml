@@ -14,27 +14,32 @@ function addToArray(arr) {
     json.push(arr);
 }
 
-function parseJson() {
-    fetch("http://localhost:8000/assets/json/JobList.json")
-    .then(response => {
-       return response.json();
-    })
-    .then(data => data['Jobs'].forEach(addToArray));
+function parseJson() {  
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.open("GET", "../assets/json/JobList.json", false);
+    xhttp.send(null);
+
+    var object1 = JSON.parse(xhttp.responseText);
+
+    object1['Jobs'].forEach(addToArray);
     //console.log(json);
 }
 
 function showJobs() {
-  var url = "https://image.shutterstock.com/image-vector/connect-logo-600w-444774109.jpg"
-  showJobItems(url);
-  //console.log(json);
+  var listNode = document.getElementById("jobListLeft");
+  listNode.innerHTML = '';
+
+  function tempfunc(item) {
+    //console.log(item);
+    showJobItems(item.ID,item.JobId,item.LogoPath,item.CompanyName,item.City,item.State,item.CreatedOn,item.AppliedCount);
+  }
   json.forEach(tempfunc);
 }
 
-function tempfunc(item, index) {
-  console.log(item + "" + index);
-}
 
-function showJobItems(imgUrl) {
+
+function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCount) {
     var listNode = document.getElementById("jobListLeft");
     var listItem = document.createElement("LIST");
     var div1 = document.createElement("DIV");
@@ -48,20 +53,21 @@ function showJobItems(imgUrl) {
     var p4 = document.createElement("P");
     var img = document.createElement("IMG");
 
-    listNode.innerHTML = '';
+    
 
     listItem.setAttribute("class","list-group-item");
+    listItem.setAttribute("onlclick",""); //onclick function
     div1.setAttribute("class","container");
     div2.setAttribute("class","row");
     div3.setAttribute("class","col-md-2");
     div4.setAttribute("class","col-md-10");
     img.setAttribute("src",imgUrl);
     img.setAttribute("width",'100%');
-    h6.innerText = 'ID';
-    p1.innerText = 'Company Name';
-    p2.innerText = 'City';
+    h6.innerText = id;
+    p1.innerText = companyName;
+    p2.innerText = city;
     p3.innerText = 'Your profile matches this job';
-    p4.innerText = 'Time posted';
+    p4.innerText = createdOn;
 
     listItem.appendChild(div1);
     div1.appendChild(div2);
