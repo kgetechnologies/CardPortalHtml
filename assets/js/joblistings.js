@@ -41,7 +41,7 @@ function showJobs() {
 
 function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCount) {
     var listNode = document.getElementById("jobListLeft");
-    var listItem = document.createElement("LIST");
+    var listItem = document.createElement("LI");
     var div1 = document.createElement("DIV");
     var div2 = document.createElement("DIV");
     var div3 = document.createElement("DIV");
@@ -53,10 +53,8 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
     var p4 = document.createElement("P");
     var img = document.createElement("IMG");
 
-    
-
     listItem.setAttribute("class","list-group-item");
-    listItem.setAttribute("onlclick",""); //onclick function
+    listItem.setAttribute("onclick","showId(this)"); //onclick function
     div1.setAttribute("class","container");
     div2.setAttribute("class","row");
     div3.setAttribute("class","col-md-2");
@@ -64,6 +62,7 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
     img.setAttribute("src",imgUrl);
     img.setAttribute("width",'100%');
     h6.innerText = id;
+    h6.setAttribute("id","listItemId");
     p1.innerText = companyName;
     p2.innerText = city;
     p3.innerText = 'Your profile matches this job';
@@ -80,6 +79,13 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
     div4.appendChild(p3);
     div4.appendChild(p4);
 
-
     listNode.appendChild(listItem);
+}
+
+function showId(item){
+  var itemId = item.querySelector("#listItemId").innerText;
+  var col = document.getElementById("jobsCol2");
+
+  alert(id);
+  col.querySelector("h6").innerText = itemId;
 }
