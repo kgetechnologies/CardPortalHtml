@@ -85,6 +85,7 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
 function showInJobsCol2(item){
   var itemId = item.querySelector("#listItemId").innerText; //get item id to fetch the json file
   var col = document.getElementById("jobsCol2");
+  var canApply;
   var xhttp = new XMLHttpRequest();
 
   xhttp.open("GET", "../assets/json/JobId" + itemId + ".json", false);
@@ -92,9 +93,14 @@ function showInJobsCol2(item){
 
   var object2 = JSON.parse(xhttp.responseText);
   console.log(object2);
+  if (object2.CanApply === true) { canApply = 'Can Apply!' } else { canApply = 'Applications Closed.' }
 
   //begin replacing items in jobsCol2
-  col.querySelector("h6").innerText = object2.JobType;
+  col.querySelector("h6").innerText = object2.EmployerType;
   col.querySelector("#jobsCol2SecondHeading").innerText = object2.CompanyName + " • " + object2.City + " • " + object2.CreatedOn + " • " + object2.AppliedCount + " applied";
+
+  col.querySelector(".col-md-7-list li:nth-child(1)").innerHTML = '<img src="./../assets/images/icons/l1.jpg" width=40px>' + object2.JobType; //logo list 1
+  col.querySelector(".col-md-7-list li:nth-child(2)").innerHTML = '<img src="./../assets/images/icons/l2.jpg" width=40px>' + object2.EmployeeCount; //logo list 2
+  col.querySelector(".col-md-7-list li:nth-child(4)").innerHTML = '<img src="./../assets/images/icons/l4.jpg" width=40px>' + canApply; //logo list 4
 
 }
