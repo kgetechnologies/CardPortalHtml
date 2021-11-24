@@ -54,14 +54,14 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
     var img = document.createElement("IMG");
 
     listItem.setAttribute("class","list-group-item");
-    listItem.setAttribute("onclick","showId(this)"); //onclick function
+    listItem.setAttribute("onclick","showInJobsCol2(this)"); //onclick function
     div1.setAttribute("class","container");
     div2.setAttribute("class","row");
     div3.setAttribute("class","col-md-2");
     div4.setAttribute("class","col-md-10");
     img.setAttribute("src",imgUrl);
     img.setAttribute("width",'100%');
-    h6.innerText = id;
+    h6.innerText = jobId;
     h6.setAttribute("id","listItemId");
     p1.innerText = companyName;
     p2.innerText = city;
@@ -82,10 +82,19 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
     listNode.appendChild(listItem);
 }
 
-function showId(item){
-  var itemId = item.querySelector("#listItemId").innerText;
+function showInJobsCol2(item){
+  var itemId = item.querySelector("#listItemId").innerText; //get item id to fetch the json file
   var col = document.getElementById("jobsCol2");
+  var xhttp = new XMLHttpRequest();
 
-  alert(id);
-  col.querySelector("h6").innerText = itemId;
+  xhttp.open("GET", "../assets/json/JobId" + itemId + ".json", false);
+  xhttp.send(null);
+
+  var object2 = JSON.parse(xhttp.responseText);
+  console.log(object2);
+
+  //begin replacing items in jobsCol2
+  col.querySelector("h6").innerText = object2.JobType;
+  col.querySelector("#jobsCol2SecondHeading").innerText = object2.CompanyName + " • " + object2.City + " • " + object2.CreatedOn + " • " + object2.AppliedCount + " applied";
+
 }
