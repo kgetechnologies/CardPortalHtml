@@ -1,6 +1,7 @@
 const json = [];
 parseJson();
 showJobs();
+clickButton();
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "500px";
@@ -54,7 +55,7 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
     var img = document.createElement("IMG");
 
     listItem.setAttribute("class","list-group-item");
-    listItem.setAttribute("onclick","showInJobsCol2(this)"); //onclick function
+    listItem.setAttribute("onclick","showInJobsCol2(this);changeHover(this);"); //onclick function
     div1.setAttribute("class","container");
     div2.setAttribute("class","row");
     div3.setAttribute("class","col-md-2");
@@ -103,4 +104,29 @@ function showInJobsCol2(item){
   col.querySelector(".col-md-7-list li:nth-child(2)").innerHTML = '<img src="./../assets/images/icons/l2.jpg" width=40px>' + object2.EmployeeCount; //logo list 2
   col.querySelector(".col-md-7-list li:nth-child(4)").innerHTML = '<img src="./../assets/images/icons/l4.jpg" width=40px>' + canApply; //logo list 4
 
+  col.querySelector("#jobsCol2JobDescription p:nth-child(1)").innerText = object2.CompanyDetails;   //company details
+  col.querySelector("#jobsCol2JobDescription p:nth-child(2)").innerText = object2["Job Description"];   //job description
+
+  col.querySelector("#jobsCol2Salary li").innerText = "Pay Range: " + object2.SalaryRange + " ₹"; //salary
+
+  col.querySelector("#jobsCol2AboutCompany .col-md-7 p:nth-child(1)").innerText = object2.CompanyName; //bottom company details part with company logo
+  col.querySelector("#jobsCol2AboutCompany .col-md-7 p:nth-child(2)").innerText = object2.Followers;
+
+  col.querySelector("#jobsCol2EmployeeDetails p:nth-child(1)").innerText = object2.EmployerType + " • " + object2.EmployeeCount + " employess" + " • " + object2.AppliedCount + " applications";
+}
+
+function changeHover(item) {
+  var x = document.getElementById("jobListLeft");
+  //x.querySelectorAll(".list-group-item").setAttribute("style"," ");
+
+  x.querySelectorAll(".list-group-item").forEach((function(y){ y.setAttribute("style","border: 0px");}))
+
+  item.setAttribute("style","border: 2.5px solid #3a57e8;");
+}
+
+function clickButton() {
+  var z = document.getElementById("jobListLeft");
+  click_event = new CustomEvent('click');
+  btn_element = z.querySelector("li:nth-child(1)");
+  btn_element.dispatchEvent(click_event);
 }
