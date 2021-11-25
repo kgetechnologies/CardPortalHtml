@@ -67,7 +67,7 @@ function showJobItems(id,jobId,imgUrl,companyName,city,state,createdOn,appliedCo
     p1.innerText = companyName;
     p2.innerText = city;
     p3.innerText = 'Your profile matches this job';
-    p4.innerText = createdOn;
+    p4.innerText = timePosted(createdOn);
 
     listItem.appendChild(div1);
     div1.appendChild(div2);
@@ -129,4 +129,23 @@ function clickButton() {
   click_event = new CustomEvent('click');
   btn_element = z.querySelector("li:nth-child(1)");
   btn_element.dispatchEvent(click_event);
+}
+
+function timePosted(datePosted) {
+  var date = new Date()
+  var day = date.getDate();
+  var month = date.getMonth()+1;
+  var year = date.getFullYear();
+
+  var date2 = month + "/" + day + "/" + year;//`${day}/${month}/${year}`;
+  var date3 = new Date(date2);
+
+  
+  var dateP = datePosted.replace(/(\d{4})\-(\d\d)\-(\d\d)/, "$2/$3/$1");
+  var dateP2 = new Date(dateP);
+
+  var diffTime = Math.abs(dateP2 - date3);
+  var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+
+  return diffDays + " days ago"; // this format- 03/07/2016
 }
