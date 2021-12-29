@@ -1,10 +1,9 @@
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
       <title>Hope UI | Responsive Bootstrap 5 Admin Dashboard Template</title>
 
       <!-- Favicon -->
@@ -25,10 +24,112 @@
 
       <!-- RTL Css -->
       <link rel="stylesheet" href="../assets/css/rtl.min.css"/>
-
+      
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <style>
+          .sidenav {
+      height: 70%;
+      overflow:scroll;
+      width: 0;
+      position: absolute;
+      z-index: 1;
+      top: 40%;
+      right: 0;
+      background-color: #ffffff;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    #jobsCol1 {
+      background:#ffffff;
+      height:850px;
+      overflow:scroll;
+      overflow-x:hidden;
+      padding-left:0px;
+      padding-right:0px;
+    }
+    #jobsCol2 {
+      background:#ffffff;
+      height:850px;
+      overflow:scroll;
+      overflow-x:hidden;
+      padding:15px;
+    }
+
+    #jobsCol1 #jobListLeft li:hover{  
+      border: 1px solid #3a57e8;
+    }
+
+    .col-md-5-list li {
+      height:130px;
+      padding-left:3px;
+    }
+
+    .col-md-5-list .col-md-2 {
+      padding-top:15px;
+    }
+
+    .col-md-7-list li {
+      border: none;
+      padding-top:0;
+      padding-bottom:0;
+    }
+
+    .col-md-2 {
+      background:#ffffff;
+      height:110px;
+      padding:0;
+    }
+    .col-md-10 {
+      background:#ffffff;
+      height:110px;
+    }
+    .col-md-10 p {
+      margin : 0;
+      padding-top:0;
+    }
+
+    #closeCross {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    #closeCross:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    hr.solid {
+      border-top: 2px solid #bbb;
+    }
+    
+    h6 {
+      font-weight: bold;
+      color: black;
+      font-size: 18px;
+    }
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
   </head>
   <body class="  ">
     <span class="screen-darken"></span>
@@ -260,7 +361,7 @@
           </div>
         </div>
       </nav>
-      <div class="navbar dual-horizontal">
+      <div class="navbar dual-horizontal" style="position:relative">
         <!-- Horizontal Menu Start -->
         <nav id="navbar_main" class="mobile-offcanvas nav navbar navbar-expand-xl hover-nav horizontal-nav mx-md-auto">
         <div class="container-fluid">
@@ -287,237 +388,634 @@
         </div> <!-- container-fluid.// -->
         </nav>
         <!-- Sidebar Menu End --></div>      <!--Nav End-->
-      <div class="conatiner-fluid content-inner pb-0">
-<div class="row">
-   <div class="col-md-12 col-lg-12">
-      <div class="row row-cols-1">
-         <div class="d-slider1 overflow-hidden ">
-            <ul  class="swiper-wrapper list-inline m-0 p-0 mb-2">
-               <li class="swiper-slide card card-slide">
-                  <div class="card-body">
-                     <div class="progress-widget">
-                        <div id="circle-progress-01" class="circle-progress-01 circle-progress circle-progress-primary text-center" data-min-value="0" data-max-value="100" data-value="90" data-type="percent">
-                           <svg class="card-slie-arrow " width="24" height="24px" viewBox="0 0 24 24">
-                              <path fill="currentColor" d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
-                           </svg>
-                        </div>
-                        <div class="progress-detail">
-                           <p  class="mb-2">Total Sales</p>
-                           <h4 class="counter">$560K</h4>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="swiper-slide card card-slide">
-                  <div class="card-body">
-                     <div class="progress-widget">
-                        <div id="circle-progress-02" class="circle-progress-01 circle-progress circle-progress-info text-center" data-min-value="0" data-max-value="100" data-value="80" data-type="percent">
-                           <svg class="card-slie-arrow " width="24" height="24" viewBox="0 0 24 24">
-                              <path fill="currentColor" d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z" />
-                           </svg>
-                        </div>
-                        <div class="progress-detail">
-                           <p  class="mb-2">Total Profit</p>
-                           <h4 class="counter">$185K</h4>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="swiper-slide card card-slide">
-                  <div class="card-body">
-                     <div class="progress-widget">
-                        <div id="circle-progress-03" class="circle-progress-01 circle-progress circle-progress-primary text-center" data-min-value="0" data-max-value="100" data-value="70" data-type="percent">
-                           <svg class="card-slie-arrow " width="24" viewBox="0 0 24 24">
-                              <path fill="currentColor" d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z" />
-                           </svg>
-                        </div>
-                        <div class="progress-detail">
-                           <p  class="mb-2">Total Cost</p>
-                           <h4 class="counter">$375K</h4>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="swiper-slide card card-slide">
-                  <div class="card-body">
-                     <div class="progress-widget">
-                        <div id="circle-progress-04" class="circle-progress-01 circle-progress circle-progress-info text-center" data-min-value="0" data-max-value="100" data-value="60" data-type="percent">
-                           <svg class="card-slie-arrow " width="24px" height="24px" viewBox="0 0 24 24">
-                              <path fill="currentColor" d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
-                           </svg>
-                        </div>
-                        <div class="progress-detail">
-                           <p  class="mb-2">Revenue</p>
-                           <h4 class="counter">$742K</h4>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="swiper-slide card card-slide">
-                  <div class="card-body">
-                     <div class="progress-widget">
-                        <div id="circle-progress-05" class="circle-progress-01 circle-progress circle-progress-primary text-center" data-min-value="0" data-max-value="100" data-value="50" data-type="percent">
-                           <svg class="card-slie-arrow " width="24px" height="24px" viewBox="0 0 24 24">
-                              <path fill="currentColor" d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
-                           </svg>
-                        </div>
-                        <div class="progress-detail">
-                           <p  class="mb-2">Net Income</p>
-                           <h4 class="counter">$150K</h4>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="swiper-slide card card-slide">
-                  <div class="card-body">
-                     <div class="progress-widget">
-                        <div id="circle-progress-06" class="circle-progress-01 circle-progress circle-progress-info text-center" data-min-value="0" data-max-value="100" data-value="40" data-type="percent">
-                           <svg class="card-slie-arrow " width="24" viewBox="0 0 24 24">
-                              <path fill="currentColor" d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z" />
-                           </svg>
-                        </div>
-                        <div class="progress-detail">
-                           <p  class="mb-2">Today</p>
-                           <h4 class="counter">$4600</h4>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="swiper-slide card card-slide">
-                  <div class="card-body">
-                     <div class="progress-widget">
-                        <div id="circle-progress-07" class="circle-progress-01 circle-progress circle-progress-primary text-center" data-min-value="0" data-max-value="100" data-value="30" data-type="percent">
-                           <svg class="card-slie-arrow " width="24" viewBox="0 0 24 24">
-                              <path fill="currentColor" d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z" />
-                           </svg>
-                        </div>
-                        <div class="progress-detail">
-                           <p  class="mb-2">Members</p>
-                           <h4 class="counter">11.2M</h4>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-            </ul>
-            <div class="swiper-button swiper-button-next"></div>
-            <div class="swiper-button swiper-button-prev"></div>
-         </div>
-      </div>
-   </div>
+      <div class="conatiner-fluid content-inner pb-0" style="margin-bottom: -31.5%;margin-top: -1%;">
 
-<!-- Job Listing Section start-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-white">
+<!-- Job Listing Navbar Section start-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-white" style="margin-bottom:5px;">
    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="align-items:center;justify-content:center;">
-      <ul class="navbar-nav">
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+      <ul class="navbar-nav" style="justify-content:center;">
+         <li class="nav-item dropdown" style="padding-right:1%;">
          <div class="dropdown">
-         <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;font-size: 0.8vw">
          Jobs
          </button>
          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">All</a>
+            <a class="dropdown-item" href="#">People</a>
+            <a class="dropdown-item" href="#">Jobs</a>
+            <a class="dropdown-item" href="#">Posts</a>
+            <a class="dropdown-item" href="#">Companies</a>
+            <a class="dropdown-item" href="#">Schools
+            <a class="dropdown-item" href="#">Groups</a>
+            <a class="dropdown-item" href="#">Events</a>
+            <a class="dropdown-item" href="#">Courses</a>
+            <a class="dropdown-item" href="#">Services</a>
          </div>
          </div>
          </li>
 
+
          <div class="vr"></div>
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+         <li class="nav-item dropdown" style="padding-left:1%;padding-right:1%">
          <div class="dropdown">
-         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;font-size: 0.8vw">
          Date Posted
          </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 18px;">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+              <label class="form-check-label" for="flexRadioDefault1">
+                Any Time
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Past Month
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                Past Week
+              </label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+              <label class="form-check-label" for="flexRadioDefault4">
+                Past 24 hours
+              </label>
+              </div>
+            <div class="dropdown-divider"></div>
+            <div style="display: inline-flex">
+              <a class="dropdown-item" href="#">Cancel</a>
+              <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 120px;font-size: 14px;white-space: nowrap;padding-right: 110px;">Show Results</button>
+            </div>
          </div>
          </div>
          </li>
 
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+
+         <li class="nav-item dropdown" style="padding-right:1%;">
          <div class="dropdown">
-         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;font-size: 0.8vw">
          Experience level
          </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 18px;">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Internship
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Entry level
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Associate
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Mid-Senior level
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Director
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Executive
+            </label>
+          </div>
+          <div class="dropdown-divider"></div>
+            <div style="display: inline-flex">
+              <a class="dropdown-item" href="#">Cancel</a>
+              <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 120px;font-size: 14px;white-space: nowrap;padding-right: 110px;">Show Results</button>
+            </div>
          </div>
          </div>
          </li>
 
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+
+         <li class="nav-item dropdown" style="padding-right:1%;">
          <div class="dropdown">
-         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;font-size: 0.8vw">
          Company
          </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 18px;width: 320%;margin-left:-100%;">
+          <div class="form-check" style="padding-bottom: 5%;">
+            <input class="form-control" type="text" placeholder="Add a Company" style="width:80%;">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Work From Home/ Fresher & Experience Jobs
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Genpact
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              SPACE Consultants
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Achievers Spot
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Markegist
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              MIRROR CONSULTANCY SERVICES
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Forever Living Products India
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              assuredjob.com
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              ONLINE WORK FROM HOME OPPORTUNITY
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              T & A Solutions
+            </label>
+          </div>
+          <div class="dropdown-divider"></div>
+            <div style="display: inline-flex">
+              <a class="dropdown-item" href="#">Cancel</a>
+              <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 120px;font-size: 14px;white-space: nowrap;padding-right: 110px;">Show Results</button>
+            </div>
          </div>
          </div>
          </li>
 
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+
+         <li class="nav-item dropdown" style="padding-right:1%;">
          <div class="dropdown">
-         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;font-size: 0.8vw">
          Job Type
          </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 18px;">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Full-time
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Part-time
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Contract
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Temporary
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Volunteer
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Internship
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Other
+            </label>
+          </div>
+          <div class="dropdown-divider"></div>
+            <div style="display: inline-flex">
+              <a class="dropdown-item" href="#">Cancel</a>
+              <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 120px;font-size: 14px;white-space: nowrap;padding-right: 110px;">Show Results</button>
+            </div>
          </div>
          </div>
          </li>
 
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+
+         <li class="nav-item dropdown" style="padding-right:1%;">
          <div class="dropdown">
-         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;font-size: 0.8vw">
          On-site/Remote
          </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="padding-left: 18px;">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              On-site
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Remote
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Hybrid
+            </label>
+          </div>
+          <div class="dropdown-divider"></div>
+            <div style="display: inline-flex">
+              <a class="dropdown-item" href="#">Cancel</a>
+              <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 120px;font-size: 14px;white-space: nowrap;padding-right: 110px;">Show Results</button>
+            </div>
          </div>
          </div>
          </li>
 
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+
+         <li class="nav-item dropdown" style="padding-right:1%;white-space: nowrap;">
          <div class="dropdown">
-         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-outline-dark" type="button" id="" style="border-radius: 30px;font-size: 0.8vw">
          Easy Apply
          </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-         </div>
          </div>
          </li>
 
+
          <div class="vr"></div>
-         <li class="nav-item dropdown" style="padding-left:20px;padding-right:20px;">
+         <li class="nav-item dropdown" style="padding-left:1%;white-space: nowrap;">
          <div class="dropdown">
-         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         <button class="btn btn-outline-dark" type="button" id="" onclick="openNav()" style="border-radius: 30px;font-size: 0.8vw">
          All filters
          </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-         </div>
          </div>
          </li>
       </ul>
    </div>
    </nav>
-<!-- Job Listing Section End-->
+ 
+   <!-- navbar all filters -->
+   <div id="mySidenav" class="sidenav">
+    <div style="position: sticky;top: 0;bottom: 0;z-index:2;">
+     <a href="javascript:void(0)" class="closebtn" id="closeCross" onclick="closeNav()">&times;</a>
+    </div>
+      <div class="container">
+        <div class="row" style="position: sticky;top: 0;bottom: 0;overflow-y: auto;background: white;padding-top: 4%;z-index: 1;">
+          <h4>Filter Only <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-radius: 30px;">
+         Jobs
+         </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">All</a>
+              <a class="dropdown-item" href="#">People</a>
+              <a class="dropdown-item" href="#">Jobs</a>
+              <a class="dropdown-item" href="#">Posts</a>
+              <a class="dropdown-item" href="#">Companies</a>
+              <a class="dropdown-item" href="#">Schools
+              <a class="dropdown-item" href="#">Groups</a>
+              <a class="dropdown-item" href="#">Events</a>
+              <a class="dropdown-item" href="#">Courses</a>
+              <a class="dropdown-item" href="#">Services</a>
+          </div> By</h4>
+        </div>
+        <hr class="solid">
+        <div class="row">
+          <h6>Sort by</h6>
+          <div class="row" style="padding-top:2%;">
+          <div class="form-check col-sm" style="padding-left:10%;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Most Recent
+            </label>
+          </div>
+          <div class="form-check col-sm">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Most Relevant
+            </label>
+          </div>
+          </div>
+        </div>
+        <hr class="solid">
+        <div class="row">
+          <h6>Date Posted</h6>
+          <div class="row" style="padding-top:2%;">
+          <div class="form-check col-sm" style="padding-left:10%;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+            <label class="form-check-label" for="flexRadioDefault1">
+              Any time
+            </label>
+          </div>
+          <div class="form-check col-sm">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Past Month
+            </label>
+          </div>
+          </div>
+          <div class="row">
+          <div class="form-check col-sm" style="padding-left:10%;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <label class="form-check-label" for="flexRadioDefault3">
+              Past Week
+            </label>
+          </div>
+          <div class="form-check col-sm">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+            <label class="form-check-label" for="flexRadioDefault4">
+              Past 24 hours
+            </label>
+          </div>
+          </div>
+        </div>
+        <hr class="solid">
+        <div class="row">
+          <h6>Experience Level</h6>
+          <div class="row" style="padding-top:2%;">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Internship
+              </label>
+            </div>
+            <div class="form-check col-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Entry level
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Associate
+              </label>
+            </div>
+            <div class="form-check col-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Mid-Senior level
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Director
+              </label>
+            </div>
+            <div class="form-check col-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Executive
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr class="solid">
+        <div class="row">
+          <h6>Company</h6>
+        </div>
+        <hr class="solid">
+        <div class="row">
+          <h6>Job Type</h6>
+          <div class="row" style="padding-top:2%;">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Full-time
+              </label>
+            </div>
+            <div class="form-check col-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Part-time
+              </label>
+            </div>
+          </div>
+          <div class="row" style="padding-top:2%;">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Contract
+              </label>
+            </div>
+            <div class="form-check col-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Temporary
+              </label>
+            </div>
+          </div>
+          <div class="row" style="padding-top:2%;">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Volunteer
+              </label>
+            </div>
+            <div class="form-check col-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Internship
+              </label>
+            </div>
+          </div>
+          <div class="row" style="padding-top:2%;">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Other
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr class="solid">
+        <div class="row">
+          <h6>On-site/Remote</h6>
+          <div class="row" style="padding-top:2%;">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                On-site
+              </label>
+            </div>
+            <div class="form-check col-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Remote
+              </label>
+            </div>
+          </div>
+          <div class="row" style="padding-top:2%;">
+            <div class="form-check col-sm" style="padding-left:10%;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Hybrid
+              </label>
+            </div>
+        </div>
+        <hr class="solid">
+        <div class="row">
+          <div class="col-sm">
+            <h6>Easy Apply</h6>
+          </div>
+          <div class="col-sm" style="margin-left: 40%;">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          </div>
+        </div>
+        <hr class="solid" style="margin-top:2%;">
+        <div class="row" style="position: sticky;top: 0;bottom: 0;overflow-y: auto;background: white;padding-top: 4%;z-index: 1;padding-bottom: 15px;">
+        <div style="display: inline-flex">
+          <a class="dropdown-item" href="#">Reset</a>
+          <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 120px;font-size: 14px;white-space: nowrap;padding-right: 110px;">Show Results</button>
+        </div>
+        </div>
+      </div>
+   </div>
+ </div>
+
+<!-- navbar all filters end-->
+<!-- Job Listing Navbar Section End-->
+
+<!-- Job Listing Main Section Start-->
+<div class="container">
+<div class="row">
+
+  <div class="col-md-5" id="jobsCol1">
+    <div class="row" style="position:sticky;top:0;bottom:0;overflow-y:auto;padding-top:10px;padding-left:15px;background:white;z-index:1;">
+      <h6>Jobs in India</h6>
+      <p>results</p>
+    </div>
+    <ul class="list-group col-md-5-list" id="jobListLeft">
+    <!--       ######   REMOVE THIS IN FINAL    #########        -->
+      <li class="list-group-item"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="https://image.shutterstock.com/image-vector/connect-logo-600w-444774109.jpg" width=100%>
+            </div>
+            <div class="col-md-10">
+              <h6>Id</h6>
+              <p>Company Name</p>
+              <p>City</p>
+              <p>Your profile matches this job</p>
+              <p>Time posted</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item"></li>
+    </ul>
+  </div>
+
+
+  <div class="col-md-7" id="jobsCol2">
+    <div class="row">
+      <h6>%EMPOYER TYPE%</h6>
+      <p id="jobsCol2SecondHeading">%COMPANY NAME% • %CITY% • %TIMEPOSTED% • %APPLICANTS%</p>
+      <ul class="list-group col-md-7-list">
+        <li class="list-group-item"><img src="./../assets/images/icons/l1.jpg" width=40px>%JOB TYPE%</li>
+        <li class="list-group-item"><img src="./../assets/images/icons/l2.jpg" width=40px>%EMPLOYEE COUNT%</li>
+        <li class="list-group-item"><img src="./../assets/images/icons/l3.jpg" width=40px>Try Premium</li>
+        <li class="list-group-item"><img src="./../assets/images/icons/l4.jpg" width=40px>%CanApply%</li>
+      </ul>
+      <div style="padding-top:20px;">
+        <button type="button" class="btn btn-primary" style="border-radius: 30px;width: 100px;font-size: 14px;white-space: nowrap;font-weight:bold;">Apply</button>
+        <button type="button" class="btn btn-outline-primary" style="border-radius: 30px;width: 100px;font-size: 14px;white-space: nowrap;font-weight:bold;">Save</button>
+      </div>
+      <div class="row" id="jobsCol2JobDescription">
+        <p  style="padding-top:4%;">%COMPANY DETAILS%</p>
+        <p  style="padding-bottom:1%;">%JOB DESCRIPTION%</p>
+      <div>
+      <div class="row" style="margin-left: 10px;" id="jobsCol2Salary">
+        <ul class="list-group">
+          <li class="list-group-item">Pay range: %SALARY%</li>
+        <ul>
+      </div>
+      <br>
+      <div class="row" style="margin-left: 10px;">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="container">
+              <div class="row">
+                <p><b>About company</b></p>
+                <br>
+              </div>
+              <div class="row" id="jobsCol2AboutCompany">
+                <div class="col-md-2" style="height:80px"><img src="https://image.shutterstock.com/image-vector/connect-logo-600w-444774109.jpg" width=65px></div>
+                <div class="col-md-7" style="height:80px">
+                  <p>%COMPANY NAME%</p>
+                  <p>%FOLLOWERS%</p>
+                </div>
+                <div class="col-md-3" style="height:80px">
+                  <button type="button" class="btn btn-outline-primary" style="border-radius: 30px;width: 110px;font-size: 14px;white-space: nowrap;font-weight:bold;">+ Follow</button>                
+                </div>
+              </div>
+              <div class="row" id="jobsCol2EmployeeDetails">
+                <p> %EmployerType% • %EMPLOYEE COUNT% • %APPLICANTS%</p>
+                <p>About company in detail</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item justify-content-center" style="display:flex;align-items:center;"><a href=# >See more</a></li>
+        <ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- Job Listing Main Section End-->
 
       <!-- Footer Section Start -->
       <footer class="footer">
@@ -536,8 +1034,14 @@
               </div>
           </div>
       </footer>
-      <!-- Footer Section End -->    </main>
+      <!-- Footer Section End -->  
+    </div>   
+  </div>  
+</main>
     <!-- Wrapper End-->
+    <!-- Joblistings Script-->
+    <script src="../assets/js/joblistings.js"></script>
+
     <!-- Library Bundle Script -->
     <script src="../assets/js/core/libs.min.js"></script>
 
@@ -564,5 +1068,8 @@
 
     <!-- App Script -->
     <script src="../assets/js/hope-ui.js" defer></script>
+
+
+ 
   </body>
 </html>
