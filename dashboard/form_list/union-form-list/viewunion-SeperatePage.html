@@ -323,86 +323,154 @@
 
     <div class="conatiner-fluid content-inner pb-0">
     <div>
-        <div class="row">
-            <div class="col-sm-12">
-                                                                <div class="card">
-                    <div class="card-header d-flex justify-content-between">
-                        <div class="header-title">
-                            <h4 class="card-title">View All Union</h4>
-                        </div>
+      <div class="row">
+         <div class="col-xl-3 col-lg-4">
+            
+         </div>
+         <div class="col-xl-9 col-lg-8">
+            <div class="card">
+               <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                     <h4 class="card-title">Union page</h4>
+                  </div>
+               </div>
+                                                            <div class="card-body">
+                  <div class="new-user-info">
+                     <form action="" method="PUT" enctype="multipart/form-data">
+                         <input type="hidden" name="_token" value="exBtkusfJ2dp5yfrTS6GJKkzhq0cvsL64Rh6qsSH">                         <input type="hidden" name="_method" value="PATCH">
+                        
+
+                          
+                           <hr>
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="fname">Union Name</label>
+                              <input type="text" class="form-control" id="fname" name="union_name" readonly="true" value="Chennai Union" placeholder="">
+                             
+                           </div>
+                           <hr>
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="add1">Address :</label>
+                              <input type="text" class="form-control" id="add1" name="address1" readonly="true" value="Bharathi street" placeholder="Street Address">
+                             
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="add1">Address Line 2</label>
+                              <input type="text" class="form-control" id="add1" name="address2" readonly="true" value="" placeholder="Street Address">
+                             
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="add1">Address Line 3</label>
+                              <input type="text" class="form-control" id="add1" name="address3" readonly="true" value="" placeholder="Street Address">
+                             
+                           </div>
+                           <hr>
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="add2">City:</label>
+                              <input type="text" class="form-control" id="add2" name="city" readonly="true" value="Velacheri" placeholder="city">
+                              
+                           </div>
+                           <hr>
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="add2">District:</label>
+                              <input type="text" class="form-control" id="add2" name="district" readonly="true" value="Chennai" placeholder="district">
+                             
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="add2">State:</label>
+                              <input type="text" class="form-control" id="add2" name="state" readonly="true" value="Tamil Nadu" placeholder="state">
+                             
+                           </div>
+                           
+                           <hr>
+                           <div class="col">
+                            <label class="form-label" for="exampleInputText4">Pincode </label>
+                          <input type="text" class="form-control" name="pincode" readonly="true" value="600042" placeholder="Pincode" >
+                         
+                          </div>
+                         <hr>
+
+                         <div class="form-group col-md-6">
+                              <label class="form-label" for="mobno">Contact number</label>
+                              <input type="text" class="form-control" id="mobno" name="contact_number" readonly="true" value="7686543451" placeholder="Phone Number">
+                             
+                           </div>
+
+                        
+                           <div class="form-group col-md-6">
+                              <label class="form-label" for="email">Email:</label>
+                              <input type="email" class="form-control" id="email" name="email" readonly="true" value="chennaiunion@gmail.com" placeholder="Email">
+                             
+                           </div>
+
+                                                   
+                     
+                     <hr>
+                     <br>
+                        <a href="https://union.kgeproducts.com/updateunion/2" class="btn btn-success">Update</a> 
+                        
+                     </form>
+
+        <div class="col-xl-9 col-lg-8">
+            <div class="card">
+               <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                     <h4 class="card-title">Committee Members</h4>
+                  </div>
+               </div>
+
+                <div class="card-body">
+                    <div class="new-user-info">
+                                        <div class="card">
+                        <h5 class="card-header">&quot;Union President&quot;</h5>
+                        <div class="card-body">
+                            <p>Sivaranjani Raja</p>
+                            <p>siva@gmail.com</p>
+                            <p>8015672383</p>
+
+                        </div>  
                     </div>
-                    <hr>
-                    <div class="card-body">
-                        <form action="https://union.kgeproducts.com/viewunionget" method="GET">
-                            <input type="hidden" name="_token" value="exBtkusfJ2dp5yfrTS6GJKkzhq0cvsL64Rh6qsSH">
-                            <div class="row">
-                                <div class="form-group col-md-4">
-                                    <select name="state" id="state" class="form-control input-lg dynamic" data-dependent="district">
-                                        <option value="">Select State</option>
-                                                                                    <option value="Tamil Nadu">Tamil Nadu</option>
-                                                                                    <option value="tamilnadu">tamilnadu</option>
-                                                                            </select>
-                                </div>
+                                        <div class="card">
+                        <h5 class="card-header">&quot;Union Chairman&quot;</h5>
+                        <div class="card-body">
+                            <p>kim namjoon</p>
+                            <p>rmbts@gmail.com</p>
+                            <p>8746453543</p>
 
-                                <div class="form-group col-md-4">
-                                    <select name="district" id="district" class="form-control input-lg dynamic" data-dependent="city">
-                                        <option value="">Select District</option>
-                                    </select>
-                                </div>
+                        </div>  
+                    </div>
+                                        <div class="card">
+                        <h5 class="card-header">&quot;Union Financier&quot;</h5>
+                        <div class="card-body">
+                            <p>kim soekjin</p>
+                            <p>jinbts@gmail.com</p>
+                            <p>8015672383</p>
 
-                                <div class="form-group col-md-4">
-                                    <select name="city" id="city" class="form-control input-lg">
-                                        <option value="">Select City</option>
-                                    </select>
-                                </div>
+                        </div>  
+                    </div>
+                                        <div class="card">
+                        <h5 class="card-header">&quot;Union Helper&quot;</h5>
+                        <div class="card-body">
+                            <p>kim teayhung</p>
+                            <p>vbts@gmail.com</p>
+                            <p>8647644675</p>
 
-                            </div>
-
-
+                        </div>  
+                    </div>
+                                         <a href="https://union.kgeproducts.com/manageunionmembers/2" title="view"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Add Committee members</button></a>
+                     
 
                     </div>
-                    <div class="card-footer ">
-                        <div class="row">
-                            <label class="col-md-5"></label>
-                            <div class="col-md-7">
-                               <button type="submit" class="btn btn-primary">Search</button>
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                    <hr>
-                    <div class="card-body">
-                                                <div class="row">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        Chennai Union, 7686543451 <br>
-                                        chennaiunion@gmail.com, <br>
-                                        Bharathi street, Velacheri <br>
-                                        Chennai, Tamil Nadu - 600042 <br>
-                                        Status:
-                                                                                    Pending
-                                        
-                                    </div>
-                                    <div class="card-footer ">
-                                        <div class="row">
-                                            <label class="col-md-4"></label>
-                                            <div class="col-md-8">
-                                                 <a href="https://union.kgeproducts.com/viewunionpage/2" title="view"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> view</button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                                            </div>
-
-                </div>
-
+                </div>                
             </div>
+        </div> 
 
-        </div>
-    </div>
+
+               </div>
+               </div>
+            </div>
+         </div> 
+      </div>
+   </div>
     </div>
     <footer class="footer">
     <div class="footer-body">
@@ -457,55 +525,3 @@
 </body>
 </html>
  
-
-<script>
-$(document).ready(function(){
-
- $('.dynamic').change(function(){
-  if($(this).val() != '')
-  {
-   var select = $(this).attr("id");
-   var value = $(this).val();
-   var dependent = $(this).data('dependent');
-   var _token = $('input[name="_token"]').val();
-   $.ajax({
-    url:"https://union.kgeproducts.com/viewunion/fetch",
-    method:"POST",
-    data:{select:select, value:value, _token:_token, dependent:dependent},
-    success:function(result)
-    {
-     $('#'+dependent).html(result);
-     console.log("hbch");
-     console.log(result);
-
-    }
-
-   })
-  }
- });
-
- $('#country').change(function(){
-  $('#state').val('');
-  $('#city').val('');
- });
-
- $('#state').change(function(){
-  $('#city').val('');
- });
-
-
-});
-</script>
-
-<style>
-
-
-table {
-  border-collapse: collapse;
-  width: 50%;
-}
-
-th {
-  height: 50px;
-}
-</style>

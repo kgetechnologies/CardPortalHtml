@@ -325,79 +325,68 @@
     <div>
         <div class="row">
             <div class="col-sm-12">
-                                                                <div class="card">
+                                <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">View All Union</h4>
+                            <h4 class="card-title">Employer Job Applications Page</h4>
                         </div>
                     </div>
                     <hr>
                     <div class="card-body">
-                        <form action="https://union.kgeproducts.com/viewunionget" method="GET">
-                            <input type="hidden" name="_token" value="exBtkusfJ2dp5yfrTS6GJKkzhq0cvsL64Rh6qsSH">
-                            <div class="row">
-                                <div class="form-group col-md-4">
-                                    <select name="state" id="state" class="form-control input-lg dynamic" data-dependent="district">
-                                        <option value="">Select State</option>
-                                                                                    <option value="Tamil Nadu">Tamil Nadu</option>
-                                                                                    <option value="tamilnadu">tamilnadu</option>
-                                                                            </select>
+                                                    <div class="card">
+                                <div class="card-header">
+
+                                    <h3>Cloud Tech pvt ltd</h3>
+                                    <br><hr>
                                 </div>
+                                <div class="card-body">
+                                <h5>Job Posted</h5>
 
-                                <div class="form-group col-md-4">
-                                    <select name="district" id="district" class="form-control input-lg dynamic" data-dependent="city">
-                                        <option value="">Select District</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group col-md-4">
-                                    <select name="city" id="city" class="form-control input-lg">
-                                        <option value="">Select City</option>
-                                    </select>
-                                </div>
-
-                            </div>
-
-
-
-                    </div>
-                    <div class="card-footer ">
-                        <div class="row">
-                            <label class="col-md-5"></label>
-                            <div class="col-md-7">
-                               <button type="submit" class="btn btn-primary">Search</button>
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                    <hr>
-                    <div class="card-body">
-                                                <div class="row">
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        Chennai Union, 7686543451 <br>
-                                        chennaiunion@gmail.com, <br>
-                                        Bharathi street, Velacheri <br>
-                                        Chennai, Tamil Nadu - 600042 <br>
-                                        Status:
-                                                                                    Pending
-                                        
+                                    
+                                    <div class="card">
+                                    <div class="card-header">
+                                    <a href="https://union.kgeproducts.com/view-jobapplicationpage/1">Laravel developer</a><br>
                                     </div>
-                                    <div class="card-footer ">
-                                        <div class="row">
-                                            <label class="col-md-4"></label>
-                                            <div class="col-md-8">
-                                                 <a href="https://union.kgeproducts.com/viewunionpage/2" title="view"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> view</button></a>
-                                            </div>
-                                        </div>
+
                                     </div>
+                                    
+                                    <div class="card">
+                                    <div class="card-header">
+                                    <a href="https://union.kgeproducts.com/view-jobapplicationpage/2">Sap developer</a><br>
+                                    </div>
+
+                                    </div>
+                                    
+                                    <div class="card">
+                                    <div class="card-header">
+                                    <a href="https://union.kgeproducts.com/view-jobapplicationpage/6">web developer</a><br>
+                                    </div>
+
+                                    </div>
+                                    
+                                    <div class="card">
+                                    <div class="card-header">
+                                    <a href="https://union.kgeproducts.com/view-jobapplicationpage/7">Laravel developer</a><br>
+                                    </div>
+
+                                    </div>
+                                    
+                                    <div class="card">
+                                    <div class="card-header">
+                                    <a href="https://union.kgeproducts.com/view-jobapplicationpage/8">web developer</a><br>
+                                    </div>
+
+                                    </div>
+                                    
+
                                 </div>
                             </div>
-                        </div>
+
                                             </div>
+
 
                 </div>
+
 
             </div>
 
@@ -458,54 +447,12 @@
 </html>
  
 
-<script>
-$(document).ready(function(){
-
- $('.dynamic').change(function(){
-  if($(this).val() != '')
-  {
-   var select = $(this).attr("id");
-   var value = $(this).val();
-   var dependent = $(this).data('dependent');
-   var _token = $('input[name="_token"]').val();
-   $.ajax({
-    url:"https://union.kgeproducts.com/viewunion/fetch",
-    method:"POST",
-    data:{select:select, value:value, _token:_token, dependent:dependent},
-    success:function(result)
-    {
-     $('#'+dependent).html(result);
-     console.log("hbch");
-     console.log(result);
-
-    }
-
-   })
-  }
- });
-
- $('#country').change(function(){
-  $('#state').val('');
-  $('#city').val('');
- });
-
- $('#state').change(function(){
-  $('#city').val('');
- });
 
 
-});
-</script>
 
 <style>
-
-
-table {
-  border-collapse: collapse;
-  width: 50%;
-}
-
-th {
-  height: 50px;
+   .col-xl-3 {
+    flex: 0 0 auto;
+    width: 0%;
 }
 </style>
