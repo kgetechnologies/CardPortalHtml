@@ -322,150 +322,63 @@
 
 
     <div class="conatiner-fluid content-inner pb-0">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
-    rel="stylesheet" />
-    <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
-    ></script>
-   <div>
-      <div class="row">
-         <div class="col-xl-3 col-lg-4">
+    <div>
+        <div class="row">
+            <div class="col-sm-12">
+                                                                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Under Review User</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                           <table id="datatable" class="table table-striped" data-toggle="data-table">
+                              <thead>
+                                 <tr>
+                                    <td>#</td>
+                                     <td>Name</td>
+                                     <td>Email</td>
+                                     <td>Status</td>
 
-         </div>
-         <div class="col-xl-9 col-lg-8">
-            <div class="card">
-               <div class="card-header d-flex justify-content-between">
-                  <div class="header-title">
-                     <h4 class="card-title">Update User Information</h4>
-                  </div>
-               </div>
-                              <div class="card-body">
-                  <div class="new-user-info">
-                     <form action="https://union.kgeproducts.com/users/updateprofile/3" method="POST" enctype="multipart/form-data">
-                         <input type="hidden" name="_token" value="exBtkusfJ2dp5yfrTS6GJKkzhq0cvsL64Rh6qsSH">                         <input type="hidden" name="_method" value="PUT">
-                        
+                                     <td>Ation</td>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                                                                                         <tr>
+                                        <td>1</td>
+                                        <td>Prema latha</td>
+                                        <td>rprems5493@gmail.com</td>
+                                                                                    <td><p class="text-muted">Under Review</p></td>
+                                        
+                                        <td>
+                                           <a href="https://union.kgeproducts.com/users/approvereject/5" title="view"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Approve</button></a>
 
-                       </div>
-                        <div class="row">
+                                        </td>
+                                     </tr>
+                                  
 
-                           <div class="form-group col-md-12">
-                             
-                           </div>
-                           <hr>
-                           <div class="form-group col-md-6">
-                              <label class="form-label" for="fname">First Name:</label>
-                              <input type="text" class="form-control" id="fname" name="first_name" value="Park" placeholder="First Name">
-                                                         </div>
+                              </tbody>
+                              <tfoot>
+                                 <tr>
+                                    <td>#</td>
+                                     <td>Name</td>
+                                     <td>Email</td>
+                                     <td>Status</td>
 
-                           <div class="form-group col-md-6">
-                              <label class="form-label" for="lname">Last Name:</label>
-                              <input type="text" class="form-control" id="lname" name="last_name" value="Jimin" placeholder="Last Name">
-                              </div>
+                                     <td>Ation</td>
+                                 </tr>
+                              </tfoot>
+                           </table>
+                        </div>
+                    </div>
+                </div>
 
-                           <hr>
-
-                           <div class="form-group col-md-6">
-                              <label class="form-label" for="email">Email:</label>
-                              <input type="email" class="form-control" id="email" name="email" readonly="true" value="sivawebdevelop@gmail.com" placeholder="Email">
-
-                           </div>
-
-                           <div class="form-group col-md-6">
-                              <label class="form-label" for="mobno">Phone Number:</label>
-                              <input type="text" class="form-control" id="mobno" name="phone_number" value="6543546787" placeholder="Phone Number">
-                                                         </div>
-                           <hr>
-
-                            <div class="form-group col-md-6">
-                              <label class="form-label" for="lname">Degree</label>
-                              <input type="text" class="form-control" id="degree" name="degree" value="" placeholder="Degree">
-                                                         </div>
-
-                           <div class="form-group col-md-6">
-                              <label class="form-label" for="lname">Year of Completion</label>
-                              <input type="text" class="form-control" id="year" name="year_of_completion" value="" placeholder="Year of completion">
-                                                         </div>
-                           <div class="form-group col-md-6">
-                              <label class="form-label" for="add1">Address :</label>
-                              <input type="text" class="form-control" id="add1" name="address" value="" placeholder="Street Address">
-                                                         </div>
-
-                           <div class="form-group">
-                      <div class="row">
-                          <div class="col">
-                            <label class="form-label" for="exampleInputText1">Pincode </label>
-                          <input type="text" class="form-control" name="pincode" placeholder="Pincode" id="textInputPincode" maxlength="6" onkeyup="isMaxLength(this)">
-                          </div>
-                          <div class="col">
-                            <label class="form-label" for="exampleInputText2"> Area </label>
-                          <select class="form-select" id="textInputArea" name="city" required="" >
-                            <option selected="" disabled=""  value="">Please select...</option>
-                            <option>...</option>
-                          </select>
-                          </div>
-                          <div class="col">
-                            <label class="form-label" for="exampleInputText3">District </label>
-                          <input type="text" class="form-control" name="district" placeholder="District" id="textInputDistrict">
-                          </div>
-                          <div class="col">
-                            <label class="form-label" for="exampleInputText4">State </label>
-                          <input type="text" class="form-control" name="state" placeholder="State" id="textInputState">
-                          </div>
-                      </div>
-                      <br>
-
-                     
-
-
-
-
-                           </div>
-                           <hr>
-                           <div class="form-group col-md-6">
-                              <label class="form-label" for="pno">Profile pic:</label>
-                              <input type="file" class="btn btn-primary" id="image" name="image" value="" placeholder="Upload Image">
-                                                         </div>
-
-                        <hr>
-                        <h3>Social Url</h3>
-                        <br>
-                        <div class="form-group">
-                        <label class="form-label" for="furl">Facebook Url:</label>
-                        <input type="text" class="form-control" id="furl" placeholder="Facebook Url">
-                     </div>
-                     <div class="form-group">
-                        <label class="form-label" for="turl">Twitter Url:</label>
-                        <input type="text" class="form-control" id="turl" placeholder="Twitter Url">
-                     </div>
-                     <div class="form-group">
-                        <label class="form-label" for="instaurl">Instagram Url:</label>
-                        <input type="text" class="form-control" id="instaurl" placeholder="Instagram Url">
-                     </div>
-                     <div class="form-group mb-0">
-                        <label class="form-label" for="lurl">Linkedin Url:</label>
-                        <input type="text" class="form-control" id="lurl" placeholder="Linkedin Url">
-                     </div>
-                     <hr>
-                     <label for="lang">Language</label>
-                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Choose Language</option>
-                        <option value="EN">English</option>
-                        <option value="TA">Tamil</option>
-
-                     </select>
-                     <hr>
-                        <button type="submit" class="btn btn-primary">Update Profile</button>
-                     </form>
-                  </div>
-               </div>
             </div>
-         </div>
-      </div>
-   </div>
+
+        </div>
+    </div>
     </div>
     <footer class="footer">
     <div class="footer-body">
@@ -519,82 +432,4 @@
 <script src="https://union.kgeproducts.com/js/app.js"></script>
 </body>
 </html>
- <script>
-    var gState;
-    var gDistrict;
-    var gCity;
-    var gRegion;
-
-    function clearDiv(){
-      const myNode = document.getElementById("main-dropdown");
-      myNode.innerHTML = '';
-    }
-    function addToLabel(sta,dis,cit,reg){
-      document.getElementById("Lstate").value=sta;
-      document.getElementById("Ldistrict").value=dis;
-      document.getElementById("Lcity").value=cit;
-      document.getElementById("Lregion").value=reg;
-    }
-    function addLi(array) {
-      var arr2 = ["District","Region","State","Country","Pincode"]
-      var c1 = document.createElement("LI");
-      var c2 = document.createElement("A");
-      var c3 = document.createElement("UL");
-      var text = document.createTextNode(array[0]);
-
-      //append list elements here
-      c3.classList.add("dropdown-menu","dropdown-submenu");
-      c2.classList.add("dropdown-item");
-      c2.setAttribute("onclick","addToLabel(gState,gDistrict,gCity,this.innerText)");
-
-      c2.appendChild(text);
-      c1.appendChild(c2);
-
-      gState = array[3];
-      gDistrict = array[2];
-      gCity = array[1];
-      gRegion = array[0];
-
-
-      document.getElementById("main-dropdown").appendChild(c1);
-    }
-
-
-    function parseJson() {
-      clearDiv();
-      var pinValue = document.getElementById("pin").value;
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-
-          var myArr = JSON.parse(this.responseText);
-          console.log(myArr[0]['PostOffice']);
-
-          var myArray = myArr[0]['PostOffice'];
-          var arrayLength = myArray.length;
-          var arr = []
-
-          for (var i = 0; i < arrayLength; i++) {
-            //create array to push to function
-              arr.push(myArr[0]['PostOffice'][i]['Name']);
-              arr.push(myArr[0]['PostOffice'][i]['District']);
-              arr.push(myArr[0]['PostOffice'][i]['Region']);
-              arr.push(myArr[0]['PostOffice'][i]['State']);
-              arr.push(myArr[0]['PostOffice'][i]['Country']);
-              arr.push(myArr[0]['PostOffice'][i]['Pincode']);
-
-              console.log(arr);
-              addLi(arr);
-              arr.length = 0;
-
-          }
-
-        }
-      };
-      xhttp.open("GET", "https://api.postalpincode.in/pincode/" + pinValue, true);
-      xhttp.send();
-
-    }
-    </script>
-     <!-- Ajax Pincode Script -->
-  <script src="./../../js/ajax_zip.js"></script>
+ 
