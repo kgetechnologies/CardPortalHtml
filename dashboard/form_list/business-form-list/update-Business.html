@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href='mobile-style.css' />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="exBtkusfJ2dp5yfrTS6GJKkzhq0cvsL64Rh6qsSH">
@@ -248,7 +250,7 @@
     </div>
   </div>
 </nav>
-<div class="navbar dual-horizontal"> -->
+<div class="navbar dual-horizontal"> 
 <nav id="navbar_main" class="mobile-offcanvas nav navbar navbar-expand-xl hover-nav horizontal-nav mx-md-auto">
    <div class="container-fluid">
       <div class="offcanvas-header">
@@ -363,10 +365,13 @@
                           <div class="col">
                             <label class="form-label" for="exampleInputText2"> Area </label>
                           <select class="form-select" id="textInputArea" name="city" required="" >
-                            <option selected="" disabled=""  value="">Please select...</option>
+                            <option selected="" disabled=""  value="">Please select..</option>
                             <option>...</option>
                           </select>
                           </div>
+						  <div class="form-group">
+                      <div class="row">
+						  
                           <div class="col">
                             <label class="form-label" for="exampleInputText3">District </label>
                           <input type="text" class="form-control" name="district" placeholder="District" id="textInputDistrict">
@@ -393,131 +398,153 @@
 
                <!-- <table>-->
 
-               <label class="form-label" for="exampleInputText"> Operation Times</label><br>
+              <label class="form-label" for="exampleInputText"> Operation Times</label><br>
                    <!-- check -->
                    <div class="form-group">
-                     <div class="row">
+                     <div class="row">  <div id="elementsToOperateOn">
                        <label class="form-label" for="exampleInputText3"> Monday </label>
-                          <div class="col">
-                           <label class="form-label" for="exampleInputText3"> From </label>
-                            
-                         <input type="time" class="form-control" name="monday[]" >
-                         </div>
-                         <div class="col">
-                           <label class="form-label" for="exampleInputText2">To </label>
-                           
-                         <input type="time" class="form-control" name="monday[]"  >
-                         </div>
-                         <div data-name="check">
-                          
-                         <input type="checkbox" class="form-check-input" id="exampleCheck1" value="24hrs" name="monday[]" value="">      24 Hrs 
-                         
-                         <input type="checkbox" class="form-check-input" id="exampleCheck1" value="closed" name="monday[]" value="">   Closed
-                         </div>
+                       <div class="col col-lg-6">
+                         <div id="elementsToOperateOn">
+                         <label class="form-label" for="exampleInputText3">From</label>
+                       <input type="time" class="form-control"  id="txt">
+                     </div> </div>
+                     <div class="col col-lg-6">
+                       <div id="elementsToOperateOn">
+                       <label class="form-label" for="exampleInputText3">To</label>
+                     <input type="time" class="form-control"  id="txt">
+                   </div> </div></div>
+                       <div class="col">
+                         <label class="form-label" for="exampleInputText2">Select</label>
+                       <div data-name="check">
+                         <input id="toggleElement" type="checkbox" class="form-check-input"  name="toggle1" onchange="toggleStatus()" />   24 Hrs
+                          <input id="toggleElement_1" class="form-check-input" type="checkbox" name="toggle2" onchange="toggleStatus_1()" />   Closed
+                     </div></div>
                        </div>
                      </div>
                      <div class="form-group">
-                       <div class="row">
+                       <div class="row"><div id="elementsToOperateOn_2">
                          <label class="form-label" for="exampleInputText3">Tuesday</label>
+                         <div class="col col-lg-6">
 
-                           <div class="col">
-                             <label class="form-label" for="exampleInputText3"> From</label>
-                           <input type="time" class="form-control" name="tuesday[]" >
-                           
-                           </div>
-                           <div class="col">
-                             <label class="form-label" for="exampleInputText2">To</label>
-                           <input type="time" class="form-control" name="tuesday[]" >
-                           </div>
-                           <div data-name="check">
-                           <input type="checkbox" class="form-check-input" id="exampleCheck1" value="24hrs" name="tuesday[]">      24 Hrs <input type="checkbox" class="form-check-input" id="exampleCheck1" value="closed" name="tuesday[]">   Closed
-                           </div>
-                         </div>
+                           <label class="form-label" for="exampleInputText3">From</label>
+                         <input type="time" class="form-control"  id="txt">
                        </div>
+                       <div class="col col-lg-6">
+                         <div id="elementsToOperateOn">
+                         <label class="form-label" for="exampleInputText3">To</label>
+                       <input type="time" class="form-control"  id="txt">
+                     </div> </div></div>
+                         <div class="col">
+                           <label class="form-label" for="exampleInputText2">Select</label>
+                         <div data-name="check">
+                          <input id="toggleElement_1" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus_1()" />   24 Hrs
+                            <input id="toggleElement_2" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus_2()" />   Closed
+                         </div>
                        <div class="form-group">
-                         <div class="row">
+                         <div class="row">   <div id="elementsToOperateOn_3">
                            <label class="form-label" for="exampleInputText3"> Wednesday</label>
-                             <div class="col">
-                               <label class="form-label" for="exampleInputText3"> From</label>
-                             <input type="time" class="form-control" name="wednesday[]" >
-                            
-                             </div>
-                             <div class="col">
-                               <label class="form-label" for="exampleInputText2">To</label>
-                             <input type="time" class="form-control" name="wednesday[]" >
-                             </div>
+                           <div class="col col-lg-6">
+
+                             <label class="form-label" for="exampleInputText3">From</label>
+                           <input type="time" class="form-control"  id="txt">
+                         </div>
+                         <div class="col col-lg-6">
+                           <div id="elementsToOperateOn">
+                           <label class="form-label" for="exampleInputText3">To</label>
+                         <input type="time" class="form-control"  id="txt">
+                       </div> </div></div>
+                           <div class="col">
+                             <label class="form-label" for="exampleInputText2">Select</label>
                              <div data-name="check">
-                             <input type="checkbox" class="form-check-input" id="exampleCheck1" value="24hrs" name="wednesday[]">      24 Hrs <input type="checkbox" class="form-check-input" id="exampleCheck1" value="closed" name="wednesday[]">   Closed
-                             </div>
+                               <input id="toggleElement_3" type="checkbox" class="form-check-input"  name="toggle" onchange="toggleStatus_3()" />   24 Hrs
+                                <input id="toggleElement_4" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus_4()" />   Closed
+                           </div></div>
                            </div>
                          </div>
                          <div class="form-group">
-                           <div class="row">
+                           <div class="row"> <div id="elementsToOperateOn">
                              <label class="form-label" for="exampleInputText3">Thursday</label>
-                               <div class="col">
-                                 <label class="form-label" for="exampleInputText3"> From</label>
-                               <input type="time" class="form-control" name="thursday[]" >
-                               
-                               </div>
-                               <div class="col">
-                                 <label class="form-label" for="exampleInputText2">To</label>
-                               <input type="time" class="form-control" name="thursday[]" >
-                               </div>
-                               <div data-name="check">
-                               <input type="checkbox" class="form-check-input" id="exampleCheck1" value="24hrs" name="thursday[]">      24 Hrs <input type="checkbox" class="form-check-input" id="exampleCheck1" value="closed" name="thursday[]">   Closed
-                               </div>
+                             <div class="col col-lg-6">
+
+                               <label class="form-label" for="exampleInputText3">From</label>
+                             <input type="time" class="form-control"  id="txt">
+                           </div>
+                           <div class="col col-lg-6">
+                             <div id="elementsToOperateOn">
+                             <label class="form-label" for="exampleInputText3">To</label>
+                           <input type="time" class="form-control"  id="txt">
+                         </div> </div></div>
+                             <div class="col">
+                               <label class="form-label" for="exampleInputText2">Select</label>
+                             <div data-name="check">
+                               <input type="checkbox" class="form-check-input" id="exampleCheck4" value="closed">   24 Hrs
+                                <input id="toggleElement" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus()" />   Closed
+                           </div></div>
                              </div>
                            </div>
                            <div class="form-group">
-                             <div class="row">
+                             <div class="row"><div id="elementsToOperateOn">
                                <label class="form-label" for="exampleInputText3">Friday</label>
-                                 <div class="col">
-                                   <label class="form-label" for="exampleInputText3"> From</label>
-                                 <input type="time" class="form-control" name="friday[]" >
-                                 
-                                 </div>
-                                 <div class="col">
-                                   <label class="form-label" for="exampleInputText2">To</label>
-                                 <input type="time" class="form-control" name="friday[]" >
-                                 </div>
-                                 <div data-name="check">
-                                 <input type="checkbox" class="form-check-input" id="exampleCheck1" value="24hrs" name="friday[]">      24 Hrs <input type="checkbox" class="form-check-input" id="exampleCheck1" value="closed" name="friday[]">   Closed
-                                 </div>
+                               <div class="col col-lg-6">
+
+                                 <label class="form-label" for="exampleInputText3">From</label>
+                               <input type="time" class="form-control"  id="txt">
+                             </div>
+                             <div class="col col-lg-6">
+                               <div id="elementsToOperateOn">
+                               <label class="form-label" for="exampleInputText3">To</label>
+                             <input type="time" class="form-control"  id="txt">
+                           </div> </div></div>
+                               <div class="col">
+                                 <label class="form-label" for="exampleInputText2">Select</label>
+                               <div data-name="check">
+                                 <input type="checkbox" class="form-check-input" id="exampleCheck5" value="closed">   24 Hrs
+                                  <input id="toggleElement" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus()" />   Closed
+                             </div></div>
                                </div>
                              </div>
                              <div class="form-group">
-                               <div class="row">
+                               <div class="row">   <div id="elementsToOperateOn">
                                  <label class="form-label" for="exampleInputText3">Saturday </label>
-                                   <div class="col">
-                                     <label class="form-label" for="exampleInputText3"> From</label>
-                                   <input type="time" class="form-control" name="saturday[]" >
-                                   
-                                   </div>
-                                   <div class="col">
-                                     <label class="form-label" for="exampleInputText2">To</label>
-                                   <input type="time" class="form-control" name="saturday[]" >
-                                   </div>
-                                   <div data-name="check">
-                                   <input type="checkbox" class="form-check-input" id="exampleCheck1" value="24hrs" name="saturday[]">      24 Hrs <input type="checkbox" class="form-check-input" id="exampleCheck1" value="closed" name="saturday[]">   Closed
-                                   </div>
+                                 <div class="col col-lg-6">
+
+                                   <label class="form-label" for="exampleInputText3">From</label>
+                                 <input type="time" class="form-control"  id="txt">
+                               </div>
+                               <div class="col col-lg-6">
+                                 <div id="elementsToOperateOn">
+                                 <label class="form-label" for="exampleInputText3">To</label>
+                               <input type="time" class="form-control"  id="txt">
+                             </div> </div></div>
+                                 <div class="col">
+                                   <label class="form-label" for="exampleInputText2">Select</label>
+                                 <div data-name="check">
+                                   <input type="checkbox" class="form-check-input" id="exampleCheck6" value="closed">   24 Hrs
+                                    <input id="toggleElement" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus()" />   Closed
+                               </div></div>
                                  </div>
                                </div>
                                <div class="form-group">
-                                 <div class="row">
+                                 <div class="row"> <div id="elementsToOperateOn">
                                    <label class="form-label" for="exampleInputText3">Sunday </label>
+                                   <div class="col col-lg-6 ">
+
+                                     <label class="form-label" for="exampleInputText3">From</label>
+                                   <input type="time" class="form-control"  id="txt">
+                                 </div>
+                                 <div class="col col-lg-6">
+                                   <div id="elementsToOperateOn">
+                                   <label class="form-label" for="exampleInputText3">To</label>
+                                 <input type="time" class="form-control"  id="txt">
+                               </div> </div></div>
                                      <div class="col">
-                                       <label class="form-label" for="exampleInputText3"> From</label>
-                                     <input type="time" class="form-control" name="sunday[]" >
-                                     
-                                     </div>
-                                     <div class="col">
-                                       <label class="form-label" for="exampleInputText2">To</label>
-                                     <input type="time" class="form-control" name="sunday[]" >
-                                     </div>
+                                       <label class="form-label" for="exampleInputText2">Select</label>
                                      <div data-name="check">
-                                     <input type="checkbox" class="form-check-input" id="exampleCheck1" value="24hrs" name="sunday[]">      24 Hrs <input type="checkbox" class="form-check-input" id="exampleCheck1" value="closed" name="sunday[]">   Closed
-                                     </div>
+                                       <input type="checkbox" class="form-check-input" id="exampleCheck7" value="closed">   24 Hrs
+                                        <input id="toggleElement" class="form-check-input" type="checkbox" name="toggle" onchange="toggleStatus()" />   Closed
+                                   </div></div>
                                    </div>
+
                                  </div>
 <br> 
 <div class="form-group">
@@ -554,12 +581,11 @@
                       </div>
                   </div>
                            <hr>
-                                                      <div class="form-group col-md-6">
+                                    <div class="form-group col-md-6">
                               <label class="form-label" for="pno">Upload Logo Image:</label>
-                              <br>
-                              <img src="/images/businesslogo/2/1635569714.jpg" alt="User-Profile" class="" value="1635569714.jpg" width="200">
                               <input type="file" class="btn btn-primary" id="image" name="logo_img" value="" placeholder="Upload Image">
-                                                         </div>
+                                            </div>
+
                            
                            <label class="form-label" for="pno"><h5>Upload multiple banner Images:</h5></label>
                            <hr>
